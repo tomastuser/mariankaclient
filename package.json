@@ -30,7 +30,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:1337",
+  "proxy": "process.env.DEPLOY_URL ? 'https://marianka.herokuapp.com' : 'http://localhost:1337'",
   "devDependencies": {
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
