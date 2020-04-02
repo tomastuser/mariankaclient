@@ -1,28 +1,28 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import AktualityPrehled from "./components/aktuality/AktualityPrehled";
-import OdrazkyUvod from "./components/OdrazkyUvod";
-import UvodStred from "./components/UvodStred";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import AktualityPrehled from './components/aktuality/AktualityPrehled';
+import OdrazkyUvod from './components/OdrazkyUvod';
+import UvodStred from './components/UvodStred';
 
 function Uvod() {
   return (
-    <div className="Uvod">
-      <div className="pozadiFixed">
-        <img src="/uploads/141b083a1fc8420b9812964e8b7f820b.jpg"></img>
+    <div className='Uvod'>
+      <div className='pozadiFixed'>
+        <img src='https://res.cloudinary.com/tomastuser/image/upload/v1585867487/ctkjqn3kbvsky1zs0o2b.jpg'></img>
       </div>
-      <div className="uvodAktuality">
+      <div className='uvodAktuality'>
         <h1>Úvod</h1>
         <br />
         <UvodStred />
         <OdrazkyUvod />
         <h1>Nejnovější aktuality</h1>
         <AktualityPrehled />
-        <Link className="button" to="/aktualityvse">
+        <Link className='button' to='/aktualityvse'>
           Všechny příspěvky
         </Link>
       </div>
-      <div className="pozadiPrazdneContainer">
-        <div className="pozadiPrazdne">
+      <div className='pozadiPrazdneContainer'>
+        <div className='pozadiPrazdne'>
           <h1>
             <i>Víte, že...</i>
           </h1>
