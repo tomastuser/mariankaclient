@@ -1,32 +1,32 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-const Foto = (props) => {
+const Foto = props => {
   const [aktualita, setAktualita] = useState({});
   const [img, setImg] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     axios
-      .get(`/news/${props.match.params.id}`)
-      .then((res) => {
+      .get(`https://marianka.herokuapp.com/articles/${props.match.params.id}`)
+      .then(res => {
         setAktualita(res.data);
         setImg(res.data.Image);
         setIsLoaded(true);
       })
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err));
   }, []);
 
   if (isLoaded) {
     return (
-      <div className="fotoContainer">
-        <div className="foto">
+      <div className='fotoContainer'>
+        <div className='foto'>
           <img
             src={img.url}
             alt={aktualita.Nadpis}
             onClick={props.history.goBack}
           />
-          <div className="button" onClick={props.history.goBack}>
+          <div className='button' onClick={props.history.goBack}>
             Zpět
           </div>
         </div>
@@ -34,7 +34,7 @@ const Foto = (props) => {
     );
   }
   return (
-    <div className="loading">
+    <div className='loading'>
       <h3>NAHRÁVÁM...</h3>
     </div>
   );

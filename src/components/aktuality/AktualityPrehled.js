@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import AktualitaZastupce from "./AktualitaZastupce";
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import AktualitaZastupce from './AktualitaZastupce';
+import axios from 'axios';
 
 const Aktuality = () => {
   const [aktuality, setAktuality] = useState({});
@@ -8,12 +8,12 @@ const Aktuality = () => {
 
   useEffect(() => {
     axios
-      .get("/news")
-      .then((res) => {
+      .get('https://marianka.herokuapp.com/articles')
+      .then(res => {
         setAktuality(res.data);
         setIsLoaded(true);
       })
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err));
   }, []);
 
   const serazeniOdNejvyssiho = () => {
@@ -23,17 +23,17 @@ const Aktuality = () => {
   };
   if (isLoaded) {
     return (
-      <div className="aktuality">
+      <div className='aktuality'>
         {serazeniOdNejvyssiho()
           .slice(0, 3)
-          .map((aktualita) => (
+          .map(aktualita => (
             <AktualitaZastupce key={aktualita.id} aktualita={aktualita} />
           ))}
       </div>
     );
   }
   return (
-    <div className="loading">
+    <div className='loading'>
       <h3>NAHRÁVÁM...</h3>
     </div>
   );

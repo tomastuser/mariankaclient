@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import AktualitaZastupce from "./AktualitaZastupce";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import AktualitaZastupce from './AktualitaZastupce';
 
 const Aktuality = () => {
   const [aktuality, setAktuality] = useState({});
@@ -9,12 +9,12 @@ const Aktuality = () => {
 
   useEffect(() => {
     axios
-      .get("/news")
-      .then((res) => {
+      .get('https://marianka.herokuapp.com/articles')
+      .then(res => {
         setAktuality(res.data);
         setIsLoaded(true);
       })
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err));
   }, []);
 
   const serazeniOdNejvyssiho = () => {
@@ -25,20 +25,20 @@ const Aktuality = () => {
 
   if (isLoaded) {
     return (
-      <div className="aktualityContainer">
-        <div className="aktuality">
-          {serazeniOdNejvyssiho().map((aktualita) => (
+      <div className='aktualityContainer'>
+        <div className='aktuality'>
+          {serazeniOdNejvyssiho().map(aktualita => (
             <AktualitaZastupce key={aktualita.id} aktualita={aktualita} />
           ))}
         </div>
-        <Link className="button" to="/">
+        <Link className='button' to='/'>
           Zpět
         </Link>
       </div>
     );
   }
   return (
-    <div className="loading">
+    <div className='loading'>
       <h3>NAHRÁVÁM...</h3>
     </div>
   );

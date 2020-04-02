@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
-const Aktualita = (props) => {
+const Aktualita = props => {
   const [aktualita, setAktualita] = useState({});
   const [img, setImg] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     axios
-      .get(`/news/${props.match.params.id}`)
-      .then((res) => {
+      .get(`https://marianka.herokuapp.com/articles/${props.match.params.id}`)
+      .then(res => {
         setAktualita(res.data);
         setImg(res.data.Image);
         setIsLoaded(true);
       })
-      .catch((err) => console.log(err));
+      .catch(err => console.log(err));
   }, []);
 
   if (isLoaded) {
     return (
-      <div className="aktualita">
-        <h2 className="aktualitaNadpis">{aktualita.Nadpis}</h2>
+      <div className='aktualita'>
+        <h2 className='aktualitaNadpis'>{aktualita.Nadpis}</h2>
         <Link to={`/images/${aktualita.id}`}>
           <img src={img.url} alt={aktualita.Nadpis} />
         </Link>
@@ -29,7 +29,7 @@ const Aktualita = (props) => {
           <div dangerouslySetInnerHTML={{ __html: aktualita.Text }}></div>
           <br />
           <br />
-          <div className="button" onClick={props.history.goBack}>
+          <div className='button' onClick={props.history.goBack}>
             Zpět
           </div>
         </div>
@@ -37,7 +37,7 @@ const Aktualita = (props) => {
     );
   }
   return (
-    <div className="loading">
+    <div className='loading'>
       <h3>NAHRÁVÁM...</h3>
     </div>
   );
