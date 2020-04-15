@@ -15,39 +15,46 @@ function OdrazkyUvod() {
     <div className='odrazkyUvodContainer'>
       <ul className='odrazkySloupecA'>
         <li>
-          <FontAwesomeIcon icon={faBug} size='1x' /> dětství v přírodě
+          <FontAwesomeIcon icon={faBug} size='1x' fixedWidth /> dětství v
+          přírodě
         </li>
         <li>
-          <FontAwesomeIcon icon={faComments} size='1x' /> individuální přístup k
-          dětem i dospělým
+          <FontAwesomeIcon icon={faComments} size='1x' fixedWidth />
+          {'  '}
+          individuální přístup k dětem i dospělým
         </li>
         <li>
-          <FontAwesomeIcon icon={faComments} size='1x' /> učení prožitkem
+          <FontAwesomeIcon icon={faComments} size='1x' fixedWidth /> učení
+          prožitkem
         </li>
         <li>
-          <FontAwesomeIcon icon={faSeedling} size='1x' /> přirozený rozvoj
+          <FontAwesomeIcon icon={faSeedling} size='1x' fixedWidth /> přirozený
+          rozvoj
         </li>
         <li>
-          <FontAwesomeIcon icon={faHammer} size='1x' /> fyzická odolnost
+          <FontAwesomeIcon icon={faHammer} size='1x' fixedWidth /> fyzická
+          odolnost
         </li>
       </ul>
       <ul className='odrazkySloupecB'>
         <li>
-          <FontAwesomeIcon icon={faTree} size='1x' /> bez zdí a plotů
+          <FontAwesomeIcon icon={faTree} size='1x' fixedWidth /> bez zdí a plotů
         </li>
         <li>
-          <FontAwesomeIcon icon={faPaintBrush} size='1x' /> nabízíme
+          <FontAwesomeIcon icon={faPaintBrush} size='1x' fixedWidth /> nabízíme
           plnohodnotné vzdělávání
         </li>
         <li>
-          <FontAwesomeIcon icon={faCampground} size='1x' /> kapacita 15 dětí
+          <FontAwesomeIcon icon={faCampground} size='1x' fixedWidth /> kapacita
+          15 dětí
         </li>
         <li>
-          <FontAwesomeIcon icon={faMapMarkedAlt} size='1x' /> školka je zapsaná
-          v rejstříku MŠMT
+          <FontAwesomeIcon icon={faMapMarkedAlt} size='1x' fixedWidth /> školka
+          je zapsaná v rejstříku MŠMT
         </li>
         <li>
-          <FontAwesomeIcon icon={faCloudSun} size='1x' /> otevřeno 7:30 až 16:00
+          <FontAwesomeIcon icon={faCloudSun} size='1x' fixedWidth /> otevřeno
+          7:30 až 16:00
         </li>
       </ul>
     </div>

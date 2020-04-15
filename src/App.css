@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   line-height: 1.4;
   text-align: center;
 }
@@ -36,7 +36,7 @@ nav {
   align-items: center;
   background: rgba(255, 255, 255, 0.9);
   color: rgba(0, 0, 0, 0.9);
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   text-align: left;
   border-bottom: dotted;
   border-color: rgba(0, 0, 0, 0.9);
@@ -166,6 +166,34 @@ nav {
 .UvodStredObrazek img {
   width: 100%;
 }
+
+.ONas {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  width: 100%;
+  margin-top: 2vw;
+}
+.ONasText {
+  grid-column: 2/3;
+  text-align: left;
+  list-style-position: inside;
+}
+
+.ONasText h1 {
+  text-align: center;
+}
+
+.ProRodice {
+  margin-top: 2vw;
+}
+
+.Dokumenty {
+  margin-top: 2vw;
+}
+
+.Kontakt {
+  margin-top: 2vw;
+}
 /* AKTUALITY */
 .aktualityContainer {
   margin-bottom: 5vw;
@@ -192,6 +220,7 @@ nav {
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
+  text-align: left;
   color: black;
   padding: 0px 0px 5px 0px;
 }
@@ -222,6 +251,14 @@ nav {
 
 .aktualitaZastupce li {
   list-style-position: inside;
+}
+
+.aktualitaZastupceText a {
+  color: grey;
+}
+
+.aktualitaZastupceText a:hover {
+  color: darkgrey;
 }
 
 .aktualita {
@@ -261,22 +298,11 @@ nav {
 }
 
 .loading {
-  height: 90vh;
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-}
-
-.loading h3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-.zapis {
-  background-color: blueviolet;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-auto-flow: row;
-  border-style: solid;
 }
 
 .zastupce {
