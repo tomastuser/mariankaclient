@@ -1,43 +1,59 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Nav({ navLinks }) {
   const [navOpen, setNavOpen] = useState(false);
 
   return (
-    <nav className="nav">
+    <div className='nav'>
       <div
-        className={navOpen ? "sideNavSpacerActive" : "sideNavSpacer"}
+        className={navOpen ? 'sideNavSpacerActive' : 'sideNavSpacer'}
         onClick={() => setNavOpen((navOpen) => (navOpen = false))}
       ></div>
-      <div className="spacer"></div>
-      <div
-        className="logo"
-        onClick={() => setNavOpen((navOpen) => (navOpen = false))}
-      >
-        <Link to="/">
-          <h1>Mariánka</h1>
-          <p>Lesní mateřská škola</p>
-        </Link>
-      </div>
-      <ul
-        className={navOpen ? "nav-links nav-active sideNavSpacer" : "nav-links"}
-        onClick={() => setNavOpen((navOpen) => (navOpen = false))}
-      >
-        {navLinks.map((link) => (
-          <Link to={link.path}>
-            <li>{link.name}</li>
-          </Link>
-        ))}
-      </ul>
-      <div className="burger-container">
-        <div className="burger" onClick={() => setNavOpen(!navOpen)}>
-          <div className="line1"></div>
-          <div className="line2"></div>
-          <div className="line3"></div>
+      <div className='spacer'></div>
+      <div onClick={() => setNavOpen((navOpen) => (navOpen = false))}>
+        <div className='logo'>
+          <img src='https://res.cloudinary.com/tomastuser/image/upload/v1587164936/marianka-logo_jo1a9u.png'></img>
+
+          <div className='logoText'>
+            <Link to='/'>
+              <h1>Mariánka</h1>
+              <p>Lesní mateřská škola</p>
+            </Link>
+          </div>
         </div>
       </div>
-    </nav>
+      <div
+        className={
+          navOpen ? 'navLinks sideNavActive sideNavSpacer' : 'navLinks'
+        }
+        onClick={() => setNavOpen((navOpen) => (navOpen = false))}
+      >
+        <ul>
+          {navLinks.map((link) => (
+            <li>
+              <Link to={link.path}>{link.name}</Link>
+              <ul className='subNav'>
+                {link.subNavLinks.map((subLink) => (
+                  <li>
+                    <Link to={{ pathname: subLink.path, state: subLink.state }}>
+                      {subLink.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className='burger-container'>
+        <div className='burger' onClick={() => setNavOpen(!navOpen)}>
+          <div className='line1'></div>
+          <div className='line2'></div>
+          <div className='line3'></div>
+        </div>
+      </div>
+    </div>
   );
 }
 

@@ -10,10 +10,6 @@ body {
   text-align: center;
 }
 
-main {
-  line-height: 1.5;
-  margin-top: 2vh;
-}
 .button {
   text-decoration: none;
   text-align: center;
@@ -36,85 +32,67 @@ main {
   width: 100%;
   min-height: 10vh;
   justify-content: space-around;
-  text-align: left;
   align-items: center;
   background: rgba(255, 255, 255, 0.9);
+  color: rgba(0, 0, 0, 0.9);
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: left;
   border-bottom: dotted;
   border-color: rgba(0, 0, 0, 0.9);
   border-width: 1px;
-  z-index: 50;
-}
-
-.navLinks {
-  width: 50%;
-}
-
-.navLinks a {
-  min-height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 16px;
-  text-decoration: none;
-  letter-spacing: 5px;
-
-  color: rgba(0, 0, 0, 0.9);
-}
-
-.navLinks a:hover {
-  background-color: rgba(240, 240, 240, 0.8);
 }
 
 .logo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 30%;
-}
-.logoText {
-  display: flex;
   text-transform: uppercase;
   letter-spacing: 5px;
+  width: 30%;
 }
-.logoText a {
+.logo a {
   color: rgba(0, 0, 0, 0.9);
   text-decoration: none;
 }
-.logoText p {
+.logo p {
   font-size: 10px;
 }
 
-.logo img {
-  height: 9vh;
-  margin-right: 1vw;
+.nav-links {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.navLinks ul {
+.nav-links a {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+  letter-spacing: 5px;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  background-color: rgba(240, 240, 240, 0.8);
+}
+
+.nav-links ul {
   list-style: none;
   display: flex;
 }
 
-.navLinks ul li {
-  position: relative;
-  width: 100%;
-  text-align: center;
-}
-.navLinks li:hover .subNav li {
+.nav-links li:hover .subNav li {
   top: 0;
   display: block;
 }
 
-.subNav li {
+.subNav ul li {
   display: none;
-  height: 0%;
   position: relative;
 }
+
 .subNav {
   position: absolute;
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: rgb(252, 252, 252);
 }
 
 .burger-container {
@@ -165,6 +143,7 @@ main {
 .uvodAktuality {
   background-color: white;
   padding-bottom: 40px;
+  padding-top: 30px;
 }
 
 .pozadiFixed {
@@ -191,74 +170,22 @@ main {
 .UvodStred {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 40vh;
 }
 
 .UvodStredObrazek {
   grid-column: 2/3;
   margin-bottom: 20px;
-  position: relative;
 }
 
 .UvodStredObrazek img {
   width: 100%;
-}
-.andel {
-  position: absolute;
-  top: 48%;
-  left: 30%;
-  right: 8%;
-}
-
-.andelObrazek {
-  position: relative;
-}
-
-.andelObrazek img {
-  width: 100%;
-}
-.dotkni {
-  position: absolute;
-  top: 10%;
-  left: 65%;
-  z-index: 3;
-  opacity: 1;
-  transition: opacity 1s ease;
-  color: black;
-}
-.andelObrazek:hover .dotkni {
-  opacity: 0;
-}
-.trup {
-  z-index: 2;
-}
-
-.hlava {
-  position: absolute;
-  top: 0px;
-  z-index: 1;
-  opacity: 1;
-  transition: opacity 1s ease;
-}
-.hlava:hover {
-  opacity: 0;
-}
-.kridla {
-  position: absolute;
-  top: 0px;
-  opacity: 1;
-  transition: opacity 1s ease;
-  z-index: 0;
-}
-.kridlaActive {
-  opacity: 0;
-  z-index: 0;
 }
 
 .ONas {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   width: 100%;
+  margin-top: 2vw;
 }
 .ONasText {
   grid-column: 2/3;
@@ -270,6 +197,17 @@ main {
   text-align: center;
 }
 
+.ProRodice {
+  margin-top: 2vw;
+}
+
+.Dokumenty {
+  margin-top: 2vw;
+}
+
+.Kontakt {
+  margin-top: 2vw;
+}
 /* AKTUALITY */
 .aktualityContainer {
   margin-bottom: 5vw;
@@ -406,6 +344,10 @@ main {
 
 /* CLENOVE TYMU */
 
+.nasTym {
+  margin-top: 2vw;
+}
+
 .tym {
   padding: 5vw;
   display: grid;
@@ -451,11 +393,11 @@ main {
 /* TABLET NAV */
 
 @media screen and (max-width: 1024px) {
-  .navLinks {
+  .nav-links {
     width: 66%;
   }
   .logo {
-    width: 20%;
+    width: 28%;
   }
   .aktualita {
     width: 75%;
@@ -480,20 +422,17 @@ main {
   .tym {
     grid-template-columns: auto auto;
   }
-  .andel {
-    top: 65%;
-  }
 }
 
 /* MOBILE NAV */
 
 @media screen and (max-width: 768px) {
-  .navLinks {
+  .nav-links {
     position: fixed;
     right: -80%;
     height: 90vh;
     top: 10vh;
-    background-color: rgba(252, 252, 252, 0.95);
+    background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -501,25 +440,14 @@ main {
     transition: right 250ms ease;
     text-transform: uppercase;
   }
-  .navLinks a {
+  .nav-links a {
     width: 100%;
+    padding-top: 6.5vh;
+    padding-bottom: 6.5vh;
     text-align: center;
   }
-  .navLinks a:hover {
+  .nav-links a:hover {
     background-color: rgba(180, 180, 180, 0.2);
-  }
-
-  .navLinks ul {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  .subNav {
-    z-index: 1;
-    background-color: rgb(230, 230, 230);
-  }
-  .sideNavActive {
-    right: 0%;
   }
 
   .burger-container {
@@ -530,6 +458,9 @@ main {
     display: block;
     float: right;
     margin-right: 5vh;
+  }
+  .nav-active {
+    right: 0%;
   }
 
   .sideNavSpacerActive {
@@ -572,8 +503,5 @@ main {
   }
   .tym {
     grid-template-columns: auto;
-  }
-  .andel {
-    top: 70%;
   }
 }
