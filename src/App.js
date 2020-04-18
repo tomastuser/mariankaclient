@@ -1,86 +1,119 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import './App.css';
+import Uvod from './components/Uvod';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import ONas from './ONas';
-import NasTym from './NasTym';
-import Kontakt from './Kontakt';
-import ProRodice from './ProRodice';
-import Dokumenty from './Dokumenty';
-import Uvod from './Uvod';
-import './App.css';
-import Aktualita from './components/aktuality/Aktualita';
-import AktualityVse from './components/aktuality/AktualityVse';
-import Foto from './components/aktuality/Foto';
+
+import OMariance from './components/ONas/OMariance';
+import Zazemi from './components/ONas/Zazemi';
+import NasTym from './components/ONas/NasTym';
+import Program from './components/ONas/Program';
+import Projekty from './components/ONas/Projekty';
+import Sponzori from './components/ONas/Sponzori';
+import Dokumenty from './components/ONas/Dokumenty';
+
+import Zapis from './components/Info/Zapis';
+import Cenik from './components/Info/Cenik';
+import CoSSebou from './components/Info/CoSSebou';
+import NasePravidla from './components/Info/NasePravidla';
+import Interni from './components/Info/Interni';
+
+import Aktualita from './components/Aktuality/Aktualita';
+import AktualityVse from './components/Aktuality/AktualityVse';
+
+import Krouzky from './components/DalsiAktivity/Krouzky';
+import Tabory from './components/DalsiAktivity/Tabory';
+import Prednasky from './components/DalsiAktivity/Prednasky';
+
+import Kontakt from './components/Kontakt';
+
+import Foto from './components/Aktuality/Foto';
 import ScrollToTop from './components/otherComponents/ScrollToTop';
 
 const App = () => {
   const navLinks = [
     {
       name: 'O nás',
-      path: '/onas',
+      path: '/omariance',
       subNavLinks: [
         {
-          name: 'Historie',
-          path: '/onas',
+          name: 'O Mariánce',
+          path: '/omariance',
         },
         {
           name: 'Zázemí',
-          path: '/onas',
+          path: '/zazemi',
+        },
+        {
+          name: 'Náš tým',
+          path: '/nastym',
         },
         {
           name: 'Program',
-          path: '/onas',
+          path: '/program',
         },
         {
-          name: 'Koncepce',
-          path: '/onas',
+          name: 'Projekty',
+          path: '/projekty',
+        },
+        {
+          name: 'Podporují nás',
+          path: '/sponzori',
+        },
+        {
+          name: 'Dokumenty',
+          path: '/dokumenty',
         },
       ],
     },
     {
-      name: 'Pro rodiče',
-      path: '/prorodice',
+      name: 'Praktické informace',
+      path: '/zapis',
       subNavLinks: [
         {
           name: 'Zápis',
-          path: '/prorodice',
+          path: '/zapis',
         },
         {
-          name: 'Ceník',
-          path: '/prorodice',
+          name: 'Ceník a stravování',
+          path: '/cenik',
         },
         {
-          name: 'Obědy',
-          path: '/prorodice',
+          name: 'Co s sebou',
+          path: '/cossebou',
         },
         {
-          name: 'Interní',
-          path: '/prorodice',
+          name: 'Naše pravidla',
+          path: '/nasepravidla',
+        },
+        {
+          name: 'Interni sekce',
+          path: '/interni',
         },
       ],
     },
     {
-      name: 'Náš tým',
-      path: '/nastym',
+      name: 'Aktuality',
+      path: '/aktuality',
       subNavLinks: [],
     },
     {
-      name: 'Dokumenty',
-      path: '/dokumenty',
+      name: 'Další aktivity',
+      path: '/krouzky',
       subNavLinks: [
         {
-          name: 'Provozní řád',
-          path: '/dokumenty',
+          name: 'Kroužky',
+          path: '/krouzky',
         },
         {
-          name: 'ŠVP',
-          path: '/dokumenty',
+          name: 'Tábory',
+          path: '/tabory',
         },
         {
-          name: 'K zápisu',
-          path: '/dokumenty',
+          name: 'Přednášky Kavylu',
+          path: '/prednasky',
         },
       ],
     },
@@ -99,13 +132,30 @@ const App = () => {
           <ScrollToTop />
           <Switch>
             <Route path='/' exact component={Uvod} />
-            <Route path='/onas' exact component={ONas} />
-            <Route path='/prorodice' exact component={ProRodice} />
+            <Route path='/onas' exact component={OMariance} />
+            <Route path='/omariance' exact component={OMariance} />
+            <Route path='/zazemi' exact component={Zazemi} />
             <Route path='/nastym' exact component={NasTym} />
+            <Route path='/program' exact component={Program} />
+            <Route path='/projekty' exact component={Projekty} />
+            <Route path='/sponzori' exact component={Sponzori} />
             <Route path='/dokumenty' exact component={Dokumenty} />
-            <Route path='/kontakt' exact component={Kontakt} />
-            <Route path='/aktualityvse' exact component={AktualityVse} />
+
+            <Route exact path='/zapis' component={Zapis} />
+            <Route exact path='/cenik' component={Cenik} />
+            <Route exact path='/cossebou' component={CoSSebou} />
+            <Route exact path='/nasepravidla' component={NasePravidla} />
+            <Route exact path='/interni' component={Interni} />
+
+            <Route path='/aktuality' exact component={AktualityVse} />
             <Route exact path='/aktuality/:id' component={Aktualita} />
+
+            <Route exact path='/krouzky' component={Krouzky} />
+            <Route exact path='/tabory' component={Tabory} />
+            <Route exact path='/prednasky' component={Prednasky} />
+
+            <Route path='/kontakt' exact component={Kontakt} />
+
             <Route exact path='/images/:id' component={Foto} />
           </Switch>
         </main>

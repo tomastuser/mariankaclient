@@ -8,12 +8,58 @@
 body {
   font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
+  list-style-position: inside;
+  color: #666666;
+}
+
+body a {
+  text-decoration: none;
 }
 
 main {
   line-height: 1.5;
   margin-top: 2vh;
+  text-align: center;
 }
+
+main a {
+  color: darkslategray;
+  font-weight: bold;
+}
+
+main a:hover {
+  color: grey;
+}
+
+.mainTextCont {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+}
+
+.mainText {
+  text-align: left;
+  grid-column: 2/3;
+}
+.mainText h1 {
+  text-align: center;
+}
+
+main p {
+  margin-bottom: 2vh;
+}
+
+main h1 {
+  margin-bottom: 2vh;
+}
+
+main h3 {
+  margin-bottom: 2vh;
+}
+
+main ul {
+  margin-bottom: 2vh;
+}
+
 .button {
   text-decoration: none;
   text-align: center;
@@ -23,9 +69,24 @@ main {
   background-color: darkslategrey;
   padding: 10px;
   border-radius: 5px;
+  font-weight: normal;
+  margin-top: 10vh;
 }
 .button:hover {
   background-color: grey;
+  color: white;
+}
+
+table {
+  margin-bottom: 2vh;
+}
+
+td {
+  padding: 0.3vw;
+  padding-right: 2vw;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
 
 /* NAVIGATION BAR */
@@ -44,6 +105,9 @@ main {
   border-width: 1px;
   z-index: 50;
 }
+.nav a {
+  color: #666666;
+}
 
 .navLinks {
   width: 50%;
@@ -57,8 +121,6 @@ main {
   font-size: 16px;
   text-decoration: none;
   letter-spacing: 5px;
-
-  color: rgba(0, 0, 0, 0.9);
 }
 
 .navLinks a:hover {
@@ -77,7 +139,6 @@ main {
   letter-spacing: 5px;
 }
 .logoText a {
-  color: rgba(0, 0, 0, 0.9);
   text-decoration: none;
 }
 .logoText p {
@@ -86,7 +147,7 @@ main {
 
 .logo img {
   height: 9vh;
-  margin-right: 1vw;
+  margin-right: 2vw;
 }
 
 .navLinks ul {
@@ -151,7 +212,6 @@ main {
 
 .Footer {
   background-color: rgba(255, 255, 255);
-  color: rgb(50, 50, 50);
   display: flex;
   width: 100%;
   justify-content: space-evenly;
@@ -160,6 +220,17 @@ main {
   margin-top: 3vh;
   border-top-style: dotted;
   border-width: 1px;
+}
+
+.Footer ul {
+  list-style: none;
+  line-height: 2;
+  text-align: left;
+  margin-bottom: 2vh;
+}
+
+.Footer img:hover {
+  opacity: 0.8;
 }
 
 .uvodAktuality {
@@ -224,7 +295,6 @@ main {
   z-index: 3;
   opacity: 1;
   transition: opacity 1s ease;
-  color: black;
 }
 .andelObrazek:hover .dotkni {
   opacity: 0;
@@ -270,6 +340,21 @@ main {
   text-align: center;
 }
 
+.sponzoriCont {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-auto-flow: row;
+  grid-gap: 4vh;
+  margin-top: 4vh;
+}
+
+.sponzoriCont div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4vh;
+}
+
 /* AKTUALITY */
 .aktualityContainer {
   margin-bottom: 5vw;
@@ -280,7 +365,9 @@ main {
   grid-template-columns: auto auto auto;
   grid-auto-flow: row;
   width: 100%;
-  padding: 2vh;
+  padding-left: 6vh;
+  padding-right: 6vh;
+  grid-gap: 4vh;
 }
 
 .aktualitaZastupce {
@@ -288,7 +375,6 @@ main {
   flex-direction: column;
   text-align: justify;
   margin: 10px;
-  /*padding: 10px 10px 0px 10px;*/
 }
 
 .aktualitaZastupceNadpis {
@@ -297,12 +383,8 @@ main {
   cursor: pointer;
   text-decoration: none;
   text-align: left;
-  color: black;
   padding: 0px 0px 5px 0px;
-}
-
-.aktualitaZastupceNadpis:hover {
-  color: grey;
+  color: #666666;
 }
 
 .aktualitaZastupceText {
@@ -323,14 +405,20 @@ main {
   flex-grow: 0;
   margin-top: 10px;
   width: 100%;
+  font-weight: normal;
 }
 
 .aktualitaZastupce li {
   list-style-position: inside;
 }
 
+.aktualitaZastupceText p {
+  margin-bottom: 0px;
+}
+
 .aktualitaZastupceText a {
-  color: grey;
+  color: darkslategray;
+  font-weight: bold;
 }
 
 .aktualitaZastupceText a:hover {
@@ -366,6 +454,7 @@ main {
 .aktualita .button {
   float: right;
   margin-top: 10px;
+  font-weight: normal;
 }
 
 .aktualita li {
@@ -407,7 +496,8 @@ main {
 /* CLENOVE TYMU */
 
 .tym {
-  padding: 5vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 5vw 5vw;
@@ -430,7 +520,6 @@ main {
 .odrazkyUvodContainer {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1.5fr 1fr;
-  color: rgb(80, 80, 80);
   font-size: 20px;
   line-height: 300%;
   margin-bottom: 2vh;
@@ -452,11 +541,17 @@ main {
 
 @media screen and (max-width: 1024px) {
   .navLinks {
-    width: 66%;
+    width: 80%;
   }
   .logo {
-    width: 20%;
+    width: 30%;
+    justify-content: space-between;
+    margin-left: 1vw;
   }
+  .mainTextCont {
+    grid-template-columns: 1fr 8fr 1fr;
+  }
+
   .aktualita {
     width: 75%;
   }
@@ -547,7 +642,10 @@ main {
   }
   .logo {
     width: 50%;
-    text-align: center;
+  }
+
+  .mainTextCont {
+    grid-template-columns: 1fr 10fr 1fr;
   }
   .aktualita {
     width: 90%;

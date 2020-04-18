@@ -9,18 +9,18 @@ const Tym = () => {
   useEffect(() => {
     axios
       .get('https://marianka.herokuapp.com/people')
-      .then(res => {
+      .then((res) => {
         setClenove(res.data);
         setIsLoaded(true);
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   }, []);
 
   if (isLoaded) {
     return (
       <div className='tymContainer'>
         <div className='tym'>
-          {clenove.map(clen => (
+          {clenove.map((clen) => (
             <ClenTymu key={clen.id} clen={clen} />
           ))}
         </div>

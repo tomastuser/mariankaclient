@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import AktualityPrehled from './components/aktuality/AktualityPrehled';
-import OdrazkyUvod from './components/OdrazkyUvod';
-import UvodStred from './components/UvodStred';
+import AktualityPrehled from './Aktuality/AktualityPrehled';
+import OdrazkyUvod from './Uvod/OdrazkyUvod';
+import UvodStred from './Uvod/UvodStred';
 
 function Uvod() {
   const [kridlaAct, setKridla] = useState(false);
@@ -38,7 +38,8 @@ function Uvod() {
         <OdrazkyUvod />
         <h1>Nejnovější aktuality</h1>
         <AktualityPrehled />
-        <Link className='button' to='/aktualityvse'>
+        <br />
+        <Link className='button' to='/aktuality'>
           Všechny příspěvky
         </Link>
       </div>
@@ -63,12 +64,6 @@ function Uvod() {
               Asociace lesních mateřských škol?
             </li>
           </ul>
-          Zázemí školky tvoří zahrada s chatkou a týpím kousek od lesa. Nabízíme
-          plnohodnotné předškolní vzdělávání pro skupinu 15 dětí. Program
-          probíhá převážně v přírodě za přítomnosti dvou pedagogů. Vycházíme z
-          přírodní pedagogiky a konceptu Respektovat a být respektován, s prvky
-          Waldorfské pedagogiky a dalších alternativních pedagogických směrů.
-          Otevřeno je každý den od 7:30 do 16:00.
         </div>
       </div>
     </div>

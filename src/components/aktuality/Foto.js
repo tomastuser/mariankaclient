@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Foto = props => {
+const Foto = (props) => {
   const [aktualita, setAktualita] = useState({});
   const [img, setImg] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
@@ -9,12 +9,12 @@ const Foto = props => {
   useEffect(() => {
     axios
       .get(`https://marianka.herokuapp.com/articles/${props.match.params.id}`)
-      .then(res => {
+      .then((res) => {
         setAktualita(res.data);
         setImg(res.data.Image);
         setIsLoaded(true);
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   }, []);
 
   if (isLoaded) {

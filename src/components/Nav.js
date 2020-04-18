@@ -13,12 +13,13 @@ function Nav({ navLinks }) {
       <div className='spacer'></div>
       <div onClick={() => setNavOpen((navOpen) => (navOpen = false))}>
         <div className='logo'>
-          <img src='https://res.cloudinary.com/tomastuser/image/upload/v1587164936/marianka-logo_jo1a9u.png'></img>
-
+          <Link to='/'>
+            <img src='https://res.cloudinary.com/tomastuser/image/upload/v1587164936/marianka-logo_jo1a9u.png'></img>
+          </Link>
           <div className='logoText'>
             <Link to='/'>
               <h1>Mariánka</h1>
-              <p>Lesní mateřská škola</p>
+              <p>Lesní mateřská škola v Brně-Líšni</p>
             </Link>
           </div>
         </div>

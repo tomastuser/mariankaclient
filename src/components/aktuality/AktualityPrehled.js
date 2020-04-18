@@ -9,11 +9,11 @@ const Aktuality = () => {
   useEffect(() => {
     axios
       .get('https://marianka.herokuapp.com/articles')
-      .then(res => {
+      .then((res) => {
         setAktuality(res.data);
         setIsLoaded(true);
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
   }, []);
 
   const serazeniOdNejvyssiho = () => {
@@ -26,7 +26,7 @@ const Aktuality = () => {
       <div className='aktuality'>
         {serazeniOdNejvyssiho()
           .slice(0, 3)
-          .map(aktualita => (
+          .map((aktualita) => (
             <AktualitaZastupce key={aktualita.id} aktualita={aktualita} />
           ))}
       </div>
