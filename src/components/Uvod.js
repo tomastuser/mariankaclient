@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import AktualityPrehled from './Aktuality/AktualityPrehled';
+import AktualityPrehled from './Aktualitky/AktualityPrehled';
 import OdrazkyUvod from './Uvod/OdrazkyUvod';
 import UvodStred from './Uvod/UvodStred';
 

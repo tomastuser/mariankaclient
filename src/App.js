@@ -20,8 +20,8 @@ import CoSSebou from './components/Info/CoSSebou';
 import NasePravidla from './components/Info/NasePravidla';
 import Interni from './components/Info/Interni';
 
-import Aktualita from './components/Aktuality/Aktualita';
-import AktualityVse from './components/Aktuality/AktualityVse';
+import Aktualita from './components/Aktualitky/Aktualita';
+import AktualityVse from './components/Aktualitky/AktualityVse';
 
 import Krouzky from './components/DalsiAktivity/Krouzky';
 import Tabory from './components/DalsiAktivity/Tabory';
@@ -29,7 +29,7 @@ import Prednasky from './components/DalsiAktivity/Prednasky';
 
 import Kontakt from './components/Kontakt';
 
-import Foto from './components/Aktuality/Foto';
+import Foto from './components/Aktualitky/Foto';
 import ScrollToTop from './components/otherComponents/ScrollToTop';
 
 const App = () => {
