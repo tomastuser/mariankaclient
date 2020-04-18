@@ -26,6 +26,12 @@ const Footer = () => {
         </a>
       </div>
       <div>
+        <a href='https://www.facebook.com/D%C4%9Btsk%C3%BD-lesn%C3%AD-klub-Mari%C3%A1nka-443991749006997/'>
+          <img
+            style={{ width: '5vw' }}
+            src='https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg'
+          ></img>
+        </a>
         <ul>
           <li>
             <FontAwesomeIcon icon={faPaperPlane} size='1x' fixedWidth />
@@ -44,16 +50,10 @@ const Footer = () => {
             <FontAwesomeIcon icon={faPhone} size='1x' fixedWidth /> 777 145 343
           </li>
           <li>
-            <FontAwesomeIcon icon={faCopyright} size='1x' fixedWidth /> Lesní
-            mateřská škola Mariánka 2020
+            <FontAwesomeIcon icon={faCopyright} size='1x' fixedWidth /> 2020
+            Lesní mateřská škola Mariánka
           </li>
         </ul>
-        <a href='https://www.facebook.com/D%C4%9Btsk%C3%BD-lesn%C3%AD-klub-Mari%C3%A1nka-443991749006997/'>
-          <img
-            style={{ width: '5vw' }}
-            src='https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg'
-          ></img>
-        </a>
       </div>
       <div>
         <a href='https://www.darujme.cz/projekt/1200844'>

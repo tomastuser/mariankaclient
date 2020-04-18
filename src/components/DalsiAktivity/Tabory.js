@@ -11,8 +11,19 @@ const Tabory = () => {
           stupně ZŠ. Máte-li děti různého věku, můžete je ve vybraných termínech
           přihlásit společně, protože otevíráme dvě paralelní skupiny s vlastním
           programem. Provozní doba tábora je vždy od pondělí do pátku od 8 do 16
-          h. Tábory 2020 Podrobné informace k letošním táborům najdete zde. K
-          dispozici je online PŘIHLÁŠKA.
+          h.
+        </p>
+        <h3>Tábory 2020</h3>
+        <p>
+          Podrobné informace k letošním táborům najdete{' '}
+          <a href='https://docs.google.com/document/d/1e0RPhQey1kTwfIeXcUfXJs1w5Ax5ULLBlLWi_uKhGMs/edit?ts=5e208598'>
+            zde
+          </a>
+          . K dispozici je online{' '}
+          <a href='https://docs.google.com/forms/d/e/1FAIpQLSclS51v02DS8Uo3mcNGtgO6i7mWdoe-CidNHxmzBqULWIJYkw/viewform'>
+            PŘIHLÁŠKA
+          </a>
+          .
         </p>
       </div>
     </div>

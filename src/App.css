@@ -37,7 +37,7 @@ main a:hover {
 }
 
 .mainText {
-  text-align: left;
+  text-align: justify;
   grid-column: 2/3;
 }
 .mainText h1 {
@@ -226,7 +226,7 @@ tr:nth-child(even) {
   list-style: none;
   line-height: 2;
   text-align: left;
-  margin-bottom: 2vh;
+  margin-top: 2vh;
 }
 
 .Footer img:hover {
@@ -353,6 +353,34 @@ tr:nth-child(even) {
   justify-content: center;
   align-items: center;
   padding: 4vh;
+}
+
+.kontaktCont {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  grid-gap: 8vh;
+  text-align: left;
+}
+
+.kontaktCont h1 {
+  text-align: center;
+}
+
+.kontaktCont ul {
+  list-style: none;
+}
+
+.kontaktA {
+  grid-column: 2/3;
+  text-align: right;
+}
+
+.kontaktB {
+  grid-column: 3/4;
+}
+
+.mapouter {
+  float: right;
 }
 
 /* AKTUALITY */

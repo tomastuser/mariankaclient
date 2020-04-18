@@ -69,6 +69,19 @@ const Program = () => {
             <td>předání dětí rodičům</td>
           </tr>
         </table>
+        <h3>Kroužky a předškolní příprava</h3>
+        <p>
+          Organizované aktivity zahrnují terapeutické bubnování, animoterapii,
+          hru s výtvarným materiálem, přírodovědu, práci s ostrými nástroji,
+          vyprávění příběhů a program s anglicky mluvícími rodilými mluvčími.
+          <br />
+          Předškolní přípravě se věnujeme podle potřeb dítěte v rámci aktivit
+          zařazených do běžného chodu dne. Zároveň probíhá také soustředěná
+          příprava - děti zpracovávají předškolácké listy, rozvíjíme cíleně
+          grafomotoriku, předmatematické představy, sluchové vnímání, s dětmi se
+          logopedicky pracuje. Absolventi naší školky úspěšně zvládají přechod
+          na základní školu.
+        </p>
       </div>
     </div>
   );

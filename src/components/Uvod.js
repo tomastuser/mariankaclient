@@ -45,9 +45,7 @@ function Uvod() {
       </div>
       <div className='pozadiPrazdneContainer'>
         <div className='pozadiPrazdne'>
-          <h1>
-            <i>Víte, že...</i>
-          </h1>
+          <h1>Víte, že...</h1>
           <ul>
             <li>
               patříme k nejdéle fungujícím lesním školkám v České republice?
