@@ -53,7 +53,7 @@ main h1 {
 }
 
 main h3 {
-  margin-bottom: 2vh;
+  margin-bottom: 1vh;
 }
 
 main ul {
@@ -68,7 +68,7 @@ main ul {
   cursor: pointer;
   background-color: darkslategrey;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 0.3rem;
   font-weight: normal;
   margin-top: 10vh;
 }
@@ -120,7 +120,7 @@ tr:nth-child(even) {
   align-items: center;
   font-size: 16px;
   text-decoration: none;
-  letter-spacing: 5px;
+  letter-spacing: 0.3rem;
 }
 
 .navLinks a:hover {
@@ -136,7 +136,7 @@ tr:nth-child(even) {
 .logoText {
   display: flex;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 0.3rem;
 }
 .logoText a {
   text-decoration: none;
@@ -189,7 +189,7 @@ tr:nth-child(even) {
 .burger div {
   width: 25px;
   height: 3px;
-  margin: 5px;
+  margin: 0.3rem;
   border-radius: 1px;
   background-color: rgba(50, 50, 50, 0.9);
 }
@@ -227,6 +227,10 @@ tr:nth-child(even) {
   line-height: 2;
   text-align: left;
   margin-top: 2vh;
+}
+
+.Footer img {
+  width: 15vw;
 }
 
 .Footer img:hover {
@@ -385,7 +389,55 @@ tr:nth-child(even) {
 
 /* AKTUALITY */
 .aktualityContainer {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 5vw;
+  align-items: center;
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  padding-left: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.pageLink {
+  position: relative;
+  display: block;
+  padding: 0.8rem 1.3rem;
+  margin-left: -1px;
+  font-size: 1rem;
+  font-weight: normal;
+  border: 1px solid grey;
+  background-color: darkslategray;
+  color: white;
+}
+
+.pageLink:hover {
+  background-color: grey;
+  color: white;
+}
+
+.pageLinkActive {
+  background-color: rgb(67, 109, 109);
+}
+
+.pageLinkDisabled {
+  cursor: default;
+}
+.pageLinkDisabled:hover {
+  background-color: darkslategray;
+}
+
+.pageItem:first-child .pageLink {
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+}
+
+.pageItem:last-child .pageLink {
+  border-top-right-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
 }
 
 .aktuality {
@@ -396,6 +448,7 @@ tr:nth-child(even) {
   padding-left: 6vh;
   padding-right: 6vh;
   grid-gap: 4vh;
+  margin-bottom: 4vh;
 }
 
 .aktualitaZastupce {
@@ -411,7 +464,7 @@ tr:nth-child(even) {
   cursor: pointer;
   text-decoration: none;
   text-align: left;
-  padding: 0px 0px 5px 0px;
+  padding: 0px 0px 0.3rem 0px;
   color: #666666;
 }
 
@@ -422,7 +475,7 @@ tr:nth-child(even) {
 .aktualitaZastupce img {
   float: left;
   width: 50%;
-  padding: 5px 10px 0px 0px;
+  padding: 0.3rem 10px 0px 0px;
 }
 
 .aktualitaZastupce img:hover {
@@ -472,7 +525,7 @@ tr:nth-child(even) {
 .aktualita img {
   width: 50%;
   float: left;
-  padding: 5px 10px 0px 0px;
+  padding: 0.3rem 10px 0px 0px;
 }
 
 .aktualita img:hover {
@@ -548,20 +601,18 @@ tr:nth-child(even) {
 .odrazkyUvodContainer {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1.5fr 1fr;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 300%;
   margin-bottom: 2vh;
 }
 .odrazkySloupecA {
   text-align: left;
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column: 2/3;
   list-style: none;
 }
 .odrazkySloupecB {
   text-align: left;
-  grid-column-start: 3;
-  grid-column-end: 4;
+  grid-column: 3/4;
   list-style: none;
 }
 
@@ -605,6 +656,24 @@ tr:nth-child(even) {
   }
   .andel {
     top: 65%;
+  }
+  .Footer {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 2vw;
+    padding-top: 4vw;
+  }
+
+  .Footer ul {
+    text-align: center;
+    margin-bottom: 5vh;
+  }
+  .Footer img {
+    width: 20vw;
+    margin-bottom: 5vh;
+  }
+  .Footer .fb {
+    margin-bottom: 0vh;
   }
 }
 
@@ -681,25 +750,52 @@ tr:nth-child(even) {
   .aktuality {
     grid-template-columns: auto;
     grid-auto-flow: row;
+    padding-left: 3vh;
+    padding-right: 3vh;
   }
   .odrazkyUvodContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: baseline;
-    padding-left: 20vw;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
     font-size: 1.1em;
     line-height: 200%;
+  }
+
+  .odrazkySloupecA {
+    grid-column: 1;
+  }
+  .odrazkySloupecB {
+    grid-column: 1;
   }
   .UvodStred {
     grid-template-columns: 1fr 8fr 1fr;
   }
+
+  .pozadiPrazdneContainer {
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+
   .pozadiPrazdne {
-    font-size: 16px;
+    font-size: 1.1em;
   }
   .tym {
     grid-template-columns: auto;
   }
   .andel {
     top: 70%;
+  }
+  .Footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-top: 8vw;
+  }
+
+  .Footer ul {
+    text-align: center;
+    margin-bottom: 5vh;
+  }
+  .Footer img {
+    width: 30vw;
+    margin-bottom: 5vh;
   }
 }

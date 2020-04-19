@@ -22,9 +22,11 @@ const Aktualita = (props) => {
     return (
       <div className='aktualita'>
         <h2 className='aktualitaNadpis'>{aktualita.Nadpis}</h2>
-        <Link to={`/images/${aktualita.id}`}>
-          <img src={img.url} alt={aktualita.Nadpis} />
-        </Link>
+        {aktualita.Image === null ? null : (
+          <Link to={`/images/${aktualita.id}`}>
+            <img src={img.url} alt={aktualita.Nadpis} />
+          </Link>
+        )}
         <div>
           <div dangerouslySetInnerHTML={{ __html: aktualita.Text }}></div>
           <br />

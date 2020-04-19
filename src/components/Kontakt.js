@@ -6,7 +6,7 @@ function Kontakt() {
       <h1>Kontakty</h1>
       <div className='kontaktCont'>
         <div className='kontaktA'>
-          <h3>Kde nás najdete:</h3> <p>Brno-Líšeň, ulice Samoty</p>
+          <h3>Kde nás najdete</h3> <p>ulice Samoty, Brno-Líšeň</p>
           <div className='mapouter'>
             <div className='gmap_canvas'>
               <iframe
@@ -41,13 +41,13 @@ function Kontakt() {
             <li>č. účtu: 77996002/5500 (Raiffeisen bank)</li>
             <li>info@lesnimarianka.cz</li>
           </ul>
-          <h3>pro rodiče:</h3>{' '}
+          <h3>Pro rodiče</h3>{' '}
           <p>
             {' '}
             Mgr. Klára Taufarová <br />
             604 536 796
           </p>
-          <h3>ředitelka:</h3>{' '}
+          <h3>Ředitelka</h3>{' '}
           <p>
             {' '}
             Mgr. Klára Krchňavá <br />
@@ -59,7 +59,7 @@ function Kontakt() {
             <li>Sídlo: č. p. 137, 664 06 Viničné Šumice</li>
             <li>IČ: 229 09 320</li>
             <li>
-              <a href='www.lesnikavyl.cz'>www.lesnikavyl.cz</a>
+              <a href='www.lesnikavyl.cz'>lesnikavyl.cz</a>
             </li>
           </ul>
           <div>

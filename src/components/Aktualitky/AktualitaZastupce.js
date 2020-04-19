@@ -11,9 +11,12 @@ const AktualitaZastupce = ({ aktualita }) => {
         <h4>{aktualita.Nadpis}</h4>
       </Link>
       <div className='aktualitaZastupceText'>
-        <Link to={`/aktuality/${aktualita.id}`}>
-          <img src={aktualita.Image.url} alt={aktualita.Nadpis} />
-        </Link>
+        {aktualita.Image === null ? null : (
+          <Link to={`/aktuality/${aktualita.id}`}>
+            <img src={aktualita.Image.url} alt={aktualita.Nadpis} />
+          </Link>
+        )}
+
         <div
           dangerouslySetInnerHTML={{
             __html:

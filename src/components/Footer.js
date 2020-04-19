@@ -11,24 +11,19 @@ const Footer = () => {
     <div className='Footer'>
       <div>
         <a href='https://www.lesnims.cz/lesni-ms/standardy-kvality.html'>
-          <img
-            style={{ width: '15vw' }}
-            src='https://res.cloudinary.com/tomastuser/image/upload/v1585867492/qdc5glp7boyre6m2sd6p.png'
-          ></img>
+          <img src='https://res.cloudinary.com/tomastuser/image/upload/v1585867492/qdc5glp7boyre6m2sd6p.png'></img>
         </a>
       </div>
       <div>
         <a href='http://www.lesnims.cz/'>
-          <img
-            style={{ width: '15vw' }}
-            src='http://www.lesnimarianka.cz/Data/Sites/1/media/alms_logo_transparentni.gif'
-          ></img>
+          <img src='http://www.lesnimarianka.cz/Data/Sites/1/media/alms_logo_transparentni.gif'></img>
         </a>
       </div>
       <div>
         <a href='https://www.facebook.com/D%C4%9Btsk%C3%BD-lesn%C3%AD-klub-Mari%C3%A1nka-443991749006997/'>
           <img
-            style={{ width: '5vw' }}
+            className='fb'
+            style={{ width: '90px' }}
             src='https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg'
           ></img>
         </a>
@@ -57,18 +52,12 @@ const Footer = () => {
       </div>
       <div>
         <a href='https://www.darujme.cz/projekt/1200844'>
-          <img
-            style={{ width: '15vw' }}
-            src='http://www.lesnimarianka.cz/Data/Sites/1/media/darujme_logo.png'
-          ></img>
+          <img src='http://www.lesnimarianka.cz/Data/Sites/1/media/darujme_logo.png'></img>
         </a>
       </div>
       <div>
         <a href='http://bit.ly/Podporuji-Kavyl'>
-          <img
-            style={{ width: '15vw' }}
-            src='http://lesnikvitek.cz/Data/Sites/1/media/uvodni/2017/givt_box_211_211.jpg'
-          ></img>
+          <img src='http://lesnikvitek.cz/Data/Sites/1/media/uvodni/2017/givt_box_211_211.jpg'></img>
         </a>
       </div>
 

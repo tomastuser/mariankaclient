@@ -23,6 +23,7 @@ import Interni from './components/Info/Interni';
 import Aktualita from './components/Aktualitky/Aktualita';
 import AktualityVse from './components/Aktualitky/AktualityVse';
 
+import DalsiAktivity from './components/DalsiAktivity/DalsiAktivity';
 import Krouzky from './components/DalsiAktivity/Krouzky';
 import Tabory from './components/DalsiAktivity/Tabory';
 import Prednasky from './components/DalsiAktivity/Prednasky';
@@ -100,8 +101,8 @@ const App = () => {
       subNavLinks: [],
     },
     {
-      name: 'Další aktivity',
-      path: '/krouzky',
+      name: 'Aktivity Kavylu',
+      path: '/dalsiaktivity',
       subNavLinks: [
         {
           name: 'Kroužky',
@@ -112,7 +113,7 @@ const App = () => {
           path: '/tabory',
         },
         {
-          name: 'Přednášky Kavylu',
+          name: 'Přednášky',
           path: '/prednasky',
         },
       ],
@@ -149,7 +150,13 @@ const App = () => {
 
             <Route path='/aktuality' exact component={AktualityVse} />
             <Route exact path='/aktuality/:id' component={Aktualita} />
+            <Route
+              exact
+              path='/aktuality/strana/:id'
+              component={AktualityVse}
+            />
 
+            <Route exact path='/dalsiaktivity' component={DalsiAktivity} />
             <Route exact path='/krouzky' component={Krouzky} />
             <Route exact path='/tabory' component={Tabory} />
             <Route exact path='/prednasky' component={Prednasky} />

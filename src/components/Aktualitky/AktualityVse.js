@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Pagination from './Pagination';
 import AktualitaZastupce from './AktualitaZastupce';
 
 const Aktuality = () => {
   const [aktuality, setAktuality] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(6);
 
   useEffect(() => {
     axios
@@ -23,20 +25,32 @@ const Aktuality = () => {
     });
   };
 
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const aktualityZde = serazeniOdNejvyssiho().slice(
+    indexOfFirstPost,
+    indexOfLastPost
+  );
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   if (isLoaded) {
     return (
       <div className='aktualityContainer'>
         <h1>Aktuality</h1>
         <br />
         <div className='aktuality'>
-          {serazeniOdNejvyssiho().map((aktualita) => (
+          {aktualityZde.map((aktualita) => (
             <AktualitaZastupce key={aktualita.id} aktualita={aktualita} />
           ))}
         </div>
         <br />
-        <Link className='button' to='/'>
-          Zpět
-        </Link>
+        <Pagination
+          postsPerPage={postsPerPage}
+          totalPosts={aktuality.length}
+          paginate={paginate}
+          currentPage={currentPage}
+        />
       </div>
     );
   }
