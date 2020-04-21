@@ -5,37 +5,37 @@ import OdrazkyUvod from './Uvod/OdrazkyUvod';
 import UvodStred from './Uvod/UvodStred';
 
 function Uvod() {
-  const [kridlaAct, setKridla] = useState(false);
+  const [kridlaAct, setKridla] = useState(true);
   return (
     <div className='Uvod'>
       <div className='pozadiFixed'>
         <img src='https://res.cloudinary.com/tomastuser/image/upload/v1586968070/IMG_6591_k3vx8h.jpg'></img>
       </div>
       <div className='uvodAktuality'>
-        <h1>Úvod</h1>
-        <br />
-        <div className='andel'>
-          <div
-            onClick={() => setKridla((kridlaAct) => !kridlaAct)}
-            className='andelObrazek'
-          >
-            <img
-              className='hlava'
-              src='https://res.cloudinary.com/tomastuser/image/upload/v1587161196/ANDEL_hlava_tu8aho.png'
-            ></img>
-            <div className='dotkni'>klikni!</div>
-            <img
-              className={kridlaAct ? 'kridlaActive kridla' : 'kridla'}
-              src='https://res.cloudinary.com/tomastuser/image/upload/v1587158349/ANDEL_kridla1_d8nlm6.png'
-            ></img>
-            <img
-              className='trup'
-              src='https://res.cloudinary.com/tomastuser/image/upload/v1587155615/ANDEL_kridla1_j05xh3.png'
-            ></img>
-          </div>
-        </div>
         <UvodStred />
         <OdrazkyUvod />
+        <div className='andelCont'>
+          <div className='andel'>
+            <div
+              onClick={() => setKridla((kridlaAct) => !kridlaAct)}
+              className='andelObrazek'
+            >
+              <img
+                className='hlava'
+                src='https://res.cloudinary.com/tomastuser/image/upload/v1587161196/ANDEL_hlava_tu8aho.png'
+              ></img>
+              <div className='dotkni'>klikni!</div>
+              <img
+                className={kridlaAct ? 'kridlaActive kridla' : 'kridla'}
+                src='https://res.cloudinary.com/tomastuser/image/upload/v1587158349/ANDEL_kridla1_d8nlm6.png'
+              ></img>
+              <img
+                className='trup'
+                src='https://res.cloudinary.com/tomastuser/image/upload/v1587155615/ANDEL_kridla1_j05xh3.png'
+              ></img>
+            </div>
+          </div>
+        </div>
         <h1>Nejnovější aktuality</h1>
         <AktualityPrehled />
         <br />

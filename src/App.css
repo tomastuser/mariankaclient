@@ -18,7 +18,6 @@ body a {
 
 main {
   line-height: 1.5;
-  margin-top: 2vh;
   text-align: center;
 }
 
@@ -254,7 +253,7 @@ tr:nth-child(even) {
   text-align: left;
 }
 .pozadiPrazdne {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.9);
   margin-top: 3vh;
   padding: 2vh 5vh 2vh 5vh;
   border-radius: 3vh;
@@ -264,25 +263,35 @@ tr:nth-child(even) {
 }
 
 .UvodStred {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-bottom: 40vh;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-content: center;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 4vh;
 }
 
 .UvodStredObrazek {
-  grid-column: 2/3;
-  margin-bottom: 20px;
+  background-image: url(https://res.cloudinary.com/tomastuser/image/upload/v1586968070/IMG_6591_k3vx8h.jpg) !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  width: 100vw;
+  min-height: 90vh;
   position: relative;
 }
 
 .UvodStredObrazek img {
-  width: 100%;
+}
+
+.andelCont {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 .andel {
-  position: absolute;
-  top: 48%;
-  left: 30%;
-  right: 8%;
+  grid-column: 2/3;
 }
 
 .andelObrazek {
@@ -297,11 +306,11 @@ tr:nth-child(even) {
   top: 10%;
   left: 65%;
   z-index: 3;
-  opacity: 1;
+  opacity: 0;
   transition: opacity 1s ease;
 }
 .andelObrazek:hover .dotkni {
-  opacity: 0;
+  opacity: 1;
 }
 .trup {
   z-index: 2;
@@ -311,11 +320,11 @@ tr:nth-child(even) {
   position: absolute;
   top: 0px;
   z-index: 1;
-  opacity: 1;
+  opacity: 0;
   transition: opacity 1s ease;
 }
 .hlava:hover {
-  opacity: 0;
+  opacity: 1;
 }
 .kridla {
   position: absolute;
