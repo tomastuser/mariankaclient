@@ -4,7 +4,7 @@ const DalsiAktivity = () => {
   return (
     <div className='mainTextCont'>
       <div className='mainText'>
-        <h1>Další aktivity</h1>
+        <h1>Aktivity Kavylu</h1>
         <p>
           {' '}
           V zázemí LMŠ Mariánka pořádá spolek Kavyl, její zřizovatel,

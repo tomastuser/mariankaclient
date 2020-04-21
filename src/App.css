@@ -33,6 +33,7 @@ main a:hover {
 .mainTextCont {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
+  margin-top: 2vh;
 }
 
 .mainText {
@@ -69,7 +70,7 @@ main ul {
   padding: 10px;
   border-radius: 0.3rem;
   font-weight: normal;
-  margin-top: 10vh;
+  margin-top: 2vh;
 }
 .button:hover {
   background-color: grey;
@@ -94,7 +95,7 @@ tr:nth-child(even) {
   display: flex;
   position: fixed;
   width: 100%;
-  min-height: 10vh;
+  max-height: 10vh;
   justify-content: space-around;
   text-align: left;
   align-items: center;
@@ -129,24 +130,27 @@ tr:nth-child(even) {
 .logo {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-content: center;
   width: 30%;
 }
 .logoText {
-  display: flex;
   text-transform: uppercase;
   letter-spacing: 0.3rem;
 }
 .logoText a {
   text-decoration: none;
+  font-size: 2.4vh;
 }
 .logoText p {
-  font-size: 10px;
+  font-size: 1.3vh;
+}
+.logoCont {
+  height: 9vh;
+  margin-right: 1.8vw;
 }
 
 .logo img {
-  height: 9vh;
-  margin-right: 2vw;
+  height: 100%;
 }
 
 .navLinks ul {
@@ -209,7 +213,7 @@ tr:nth-child(even) {
 
 /* PAGES */
 
-.Footer {
+.FooterD {
   background-color: rgba(255, 255, 255);
   display: flex;
   width: 100%;
@@ -236,6 +240,10 @@ tr:nth-child(even) {
   opacity: 0.8;
 }
 
+.FooterM {
+  display: none;
+}
+
 .uvodAktuality {
   background-color: white;
   padding-bottom: 40px;
@@ -253,7 +261,7 @@ tr:nth-child(even) {
   text-align: left;
 }
 .pozadiPrazdne {
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.8);
   margin-top: 3vh;
   padding: 2vh 5vh 2vh 5vh;
   border-radius: 3vh;
@@ -281,9 +289,6 @@ tr:nth-child(even) {
   width: 100vw;
   min-height: 90vh;
   position: relative;
-}
-
-.UvodStredObrazek img {
 }
 
 .andelCont {
@@ -352,6 +357,9 @@ tr:nth-child(even) {
 .ONasText h1 {
   text-align: center;
 }
+.nasTym {
+  margin-top: 2vh;
+}
 
 .sponzoriCont {
   display: grid;
@@ -367,19 +375,25 @@ tr:nth-child(even) {
   align-items: center;
   padding: 4vh;
 }
+.kontaktContM {
+  display: none;
+}
 
-.kontaktCont {
+.kontaktContD {
   display: grid;
   grid-template-columns: 1fr 2fr 2fr 1fr;
   grid-gap: 8vh;
   text-align: left;
 }
+.kontakt {
+  margin-top: 2vh;
+}
 
-.kontaktCont h1 {
+.kontakt h1 {
   text-align: center;
 }
 
-.kontaktCont ul {
+.kontakt ul {
   list-style: none;
 }
 
@@ -400,6 +414,7 @@ tr:nth-child(even) {
 .aktualityContainer {
   display: flex;
   flex-direction: column;
+  margin-top: 2vh;
   margin-bottom: 5vw;
   align-items: center;
 }
@@ -572,7 +587,7 @@ tr:nth-child(even) {
 .foto {
   grid-column-start: 2;
   grid-column-end: 3;
-  margin-bottom: 50px;
+  margin-bottom: 2vh;
   margin-top: 5vh;
 }
 .foto img {
@@ -663,10 +678,10 @@ tr:nth-child(even) {
   .tym {
     grid-template-columns: auto auto;
   }
-  .andel {
-    top: 65%;
+  .andelCont {
+    grid-template-columns: 1fr 4fr 1fr;
   }
-  .Footer {
+  .FooterD {
     display: grid;
     grid-template-columns: auto auto auto;
     padding: 2vw;
@@ -689,6 +704,9 @@ tr:nth-child(even) {
 /* MOBILE NAV */
 
 @media screen and (max-width: 768px) {
+  .nav {
+    min-height: 10vh;
+  }
   .navLinks {
     position: fixed;
     right: -80%;
@@ -730,7 +748,7 @@ tr:nth-child(even) {
   .burger {
     display: block;
     float: right;
-    margin-right: 5vh;
+    margin-right: 3vw;
   }
 
   .sideNavSpacerActive {
@@ -781,7 +799,7 @@ tr:nth-child(even) {
   }
 
   .pozadiPrazdneContainer {
-    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-columns: 1fr 25fr 1fr;
   }
 
   .pozadiPrazdne {
@@ -790,13 +808,11 @@ tr:nth-child(even) {
   .tym {
     grid-template-columns: auto;
   }
-  .andel {
-    top: 70%;
+  .andelCont {
+    grid-template-columns: 1fr 8fr 1fr;
   }
-  .Footer {
-    display: grid;
-    grid-template-columns: auto auto;
-    padding-top: 8vw;
+  .FooterD {
+    display: none;
   }
 
   .Footer ul {
@@ -804,7 +820,38 @@ tr:nth-child(even) {
     margin-bottom: 5vh;
   }
   .Footer img {
-    width: 30vw;
+    width: 60vw;
     margin-bottom: 5vh;
+  }
+  .FooterM {
+    padding-top: 8vw;
+    background-color: rgba(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3vh;
+    border-top-style: dotted;
+    border-width: 1px;
+  }
+  .kontaktContD {
+    display: none;
+  }
+  .kontaktContM {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .kontaktA {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .kontaktB {
+  }
+  .mapouter {
+    float: none;
+    align-self: center;
   }
 }

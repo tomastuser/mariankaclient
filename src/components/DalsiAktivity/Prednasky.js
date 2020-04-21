@@ -4,7 +4,7 @@ const Prednasky = () => {
   return (
     <div className='mainTextCont'>
       <div className='mainText'>
-        <h1>Přednášky Kavylu</h1>
+        <h1>Přednášky</h1>
         <p>
           Spolek Kavyl, zřizovatel školky pořádá v Líšni také přednášky pro
           rodiče i širokou veřejnost o vzdělávání a výchově.

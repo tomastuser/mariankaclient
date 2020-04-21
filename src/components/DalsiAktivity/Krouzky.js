@@ -4,7 +4,7 @@ const Krouzky = () => {
   return (
     <div className='mainTextCont'>
       <div className='mainText'>
-        <h1>Kroužky a předškolní příprava</h1>
+        <h1>Kroužky</h1>
         <h3>Zvoneček</h3>
         <p>
           Na jaře, na podzim a v zimě probíhá cyklus setkání určených pro děti
