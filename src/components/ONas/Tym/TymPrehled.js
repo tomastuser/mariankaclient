@@ -16,13 +16,21 @@ const Tym = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  const serazeniOdNejvyssiho = () => {
+    return [].slice.call(clenove).sort(function (a, b) {
+      return b.id - a.id;
+    });
+  };
+
   if (isLoaded) {
     return (
       <div className='tymContainer'>
         <div className='tym'>
-          {clenove.map((clen) => (
-            <ClenTymu key={clen.id} clen={clen} />
-          ))}
+          {serazeniOdNejvyssiho()
+            .reverse()
+            .map((clen) => (
+              <ClenTymu key={clen.id} clen={clen} />
+            ))}
         </div>
       </div>
     );

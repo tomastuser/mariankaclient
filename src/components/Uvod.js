@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import AktualityPrehled from './Aktualitky/AktualityPrehled';
 import OdrazkyUvod from './Uvod/OdrazkyUvod';
-import UvodStred from './Uvod/UvodStred';
+import UvodSlider from './Uvod/UvodSlider';
 
 function Uvod() {
   const [kridlaAct, setKridla] = useState(true);
@@ -12,7 +12,7 @@ function Uvod() {
         <img src='https://res.cloudinary.com/tomastuser/image/upload/v1586968070/IMG_6591_k3vx8h.jpg'></img>
       </div>
       <div className='uvodAktuality'>
-        <UvodStred />
+        <UvodSlider />
         <OdrazkyUvod />
         <div className='andelCont'>
           <div className='andel'>

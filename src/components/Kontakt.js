@@ -8,10 +8,10 @@ function Kontakt() {
         <div className='kontaktContD'>
           <div className='kontaktA'>
             <h3>Kde nás najdete</h3> <p>ulice Samoty, Brno-Líšeň</p>
-            <div className='mapouter'>
-              <div className='gmap_canvas'>
+            <div className='mapouterD'>
+              <div className='gmapCanvas'>
                 <iframe
-                  id='gmap_canvas'
+                  id='gmapCanvas'
                   src='https://maps.google.com/maps?q=49.2155000N%2C%2016.6988333E&t=&z=13&ie=UTF8&iwloc=&output=embed'
                   scrolling='no'
                   marginHeight={0}
@@ -20,9 +20,6 @@ function Kontakt() {
                   height={500}
                   frameBorder={0}
                 />
-                <a href='https://www.embedgooglemap.net/blog/nordvpn-coupon-code/'>
-                  nordvpn discount
-                </a>
               </div>
               <style
                 dangerouslySetInnerHTML={{
@@ -114,7 +111,7 @@ function Kontakt() {
           </div>
           <div className='kontaktA'>
             <h3>Kde nás najdete</h3> <p>ulice Samoty, Brno-Líšeň</p>
-            <div className='mapouter'>
+            <div className='mapouterM'>
               <div className='gmap_canvas'>
                 <iframe
                   id='gmap_canvas'
@@ -122,18 +119,16 @@ function Kontakt() {
                   scrolling='no'
                   marginHeight={0}
                   marginWidth={0}
-                  width={400}
-                  height={500}
+                  width={320}
+                  height={320}
                   frameBorder={0}
                 />
-                <a href='https://www.embedgooglemap.net/blog/nordvpn-coupon-code/'>
-                  nordvpn discount
-                </a>
+                <a href='https://www.embedgooglemap.net' />
               </div>
               <style
                 dangerouslySetInnerHTML={{
                   __html:
-                    '.mapouter{position:relative;text-align:right;height:500px;width:400px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:400px;}',
+                    '.mapouter{position:relative;text-align:right;height:320px;width:320px;}.gmap_canvas {overflow:hidden;background:none!important;height:320px;width:320px;}',
                 }}
               />
             </div>

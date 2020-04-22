@@ -284,32 +284,25 @@ tr:nth-child(even) {
   font-size: 1.3em;
 }
 
-.UvodStred {
+.UvodSliderCont {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
-  align-content: center;
-  width: 100%;
   overflow: hidden;
-  margin-bottom: 4vh;
+  align-content: center;
 }
+
+.UvodSlider img {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+}
+
 .vitejte {
   color: rgb(253, 253, 236);
   text-align: center;
   font-weight: bold;
   margin-top: 38vh;
   font-size: 6vh;
-}
-
-.UvodStredObrazek {
-  background-image: url(https://res.cloudinary.com/tomastuser/image/upload/v1586968070/IMG_6591_k3vx8h.jpg) !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  width: 100vw;
-  min-height: 90vh;
-  position: relative;
 }
 
 .andelCont {
@@ -422,8 +415,13 @@ tr:nth-child(even) {
   grid-column: 3/4;
 }
 
-.mapouter {
+.mapouterD {
   float: right;
+  display: block;
+}
+
+.mapouterM {
+  display: none;
 }
 
 /* AKTUALITY */
@@ -660,6 +658,7 @@ tr:nth-child(even) {
   font-size: 19px;
   line-height: 300%;
   margin-bottom: 2vh;
+  margin-top: 4vh;
 }
 .odrazkySloupecA {
   text-align: left;
@@ -681,6 +680,7 @@ tr:nth-child(even) {
   .logo {
     width: 30%;
     justify-content: space-between;
+
     margin-left: 1vw;
   }
   .mainTextCont {
@@ -700,7 +700,7 @@ tr:nth-child(even) {
     line-height: 250%;
   }
 
-  .UvodStred {
+  .UvodSliderCont {
     grid-template-columns: 1fr 3fr 1fr;
   }
 
@@ -781,7 +781,7 @@ tr:nth-child(even) {
   .burger {
     display: block;
     float: right;
-    margin-right: 3vw;
+    margin-right: 4vw;
   }
 
   .sideNavSpacerActive {
@@ -797,8 +797,14 @@ tr:nth-child(even) {
     display: block;
     width: 25%;
   }
+
   .logo {
-    width: 50%;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logoText {
+    text-align: center;
   }
 
   .mainTextCont {
@@ -827,7 +833,7 @@ tr:nth-child(even) {
   .odrazkySloupecB {
     grid-column: 1;
   }
-  .UvodStred {
+  .UvodSliderCont {
     grid-template-columns: 1fr 8fr 1fr;
   }
 
@@ -864,7 +870,6 @@ tr:nth-child(even) {
     width: 100%;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 3vh;
     border-top-style: dotted;
     border-width: 1px;
   }
@@ -881,8 +886,31 @@ tr:nth-child(even) {
     flex-direction: column;
     text-align: center;
   }
-  .mapouter {
+  .mapouterM {
+    display: block;
     float: none;
     align-self: center;
+  }
+  .mapouterD {
+    display: none;
+  }
+}
+
+/* SMALL MOBILE NAV */
+
+@media screen and (max-width: 450px) {
+  .spacer {
+    display: none;
+  }
+  .logo {
+    width: 100%;
+    margin-left: 3vw;
+  }
+  .logoText {
+    text-align: left;
+  }
+
+  .burger-container {
+    width: 25%;
   }
 }

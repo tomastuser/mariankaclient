@@ -2,6 +2,9 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import './App.css';
+import './slick-theme.css';
+import './slick.css';
+
 import Uvod from './components/Uvod';
 import Nav from './components/Nav';
 import Footer from './components/Footer';

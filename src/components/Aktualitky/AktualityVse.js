@@ -21,7 +21,7 @@ const Aktuality = () => {
 
   const serazeniOdNejvyssiho = () => {
     return [].slice.call(aktuality).sort(function (a, b) {
-      return a - b;
+      return b.id - a.id;
     });
   };
 
