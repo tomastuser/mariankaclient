@@ -30,10 +30,18 @@ main a:hover {
   color: grey;
 }
 
+.mainOstatni {
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  background-color: #fdfdec;
+}
+
 .mainTextCont {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
-  margin-top: 2vh;
+  padding-top: 5vh;
+  padding-bottom: 10vh;
+  background-color: #fdfdec;
 }
 
 .mainText {
@@ -49,7 +57,7 @@ main p {
 }
 
 main h1 {
-  margin-bottom: 2vh;
+  margin-bottom: 5vh;
 }
 
 main h3 {
@@ -64,7 +72,7 @@ main ul {
   text-decoration: none;
   text-align: center;
   width: 100%;
-  color: white;
+  color: #fdfdec;
   cursor: pointer;
   background-color: darkslategrey;
   padding: 10px;
@@ -74,7 +82,7 @@ main ul {
 }
 .button:hover {
   background-color: grey;
-  color: white;
+  color: #fdfdec;
 }
 
 table {
@@ -86,7 +94,7 @@ td {
   padding-right: 2vw;
 }
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #f0f0de;
 }
 
 /* NAVIGATION BAR */
@@ -99,18 +107,22 @@ tr:nth-child(even) {
   justify-content: space-around;
   text-align: left;
   align-items: center;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(253, 253, 236, 0.9);
   border-bottom: dotted;
   border-color: rgba(0, 0, 0, 0.9);
   border-width: 1px;
   z-index: 50;
 }
-.nav a {
+.navLink {
   color: #666666;
 }
 
 .navLinks {
   width: 50%;
+}
+
+.navLinkActive {
+  background-color: rgba(218, 218, 202, 0.2);
 }
 
 .navLinks a {
@@ -124,7 +136,7 @@ tr:nth-child(even) {
 }
 
 .navLinks a:hover {
-  background-color: rgba(240, 240, 240, 0.8);
+  background-color: rgba(240, 240, 224, 0.25);
 }
 
 .logo {
@@ -140,6 +152,7 @@ tr:nth-child(even) {
 .logoText a {
   text-decoration: none;
   font-size: 2.4vh;
+  color: #666666;
 }
 .logoText p {
   font-size: 1.3vh;
@@ -178,7 +191,7 @@ tr:nth-child(even) {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background-color: rgb(252, 252, 252);
+  background-color: rgba(250, 250, 233, 0.98);
 }
 
 .burger-container {
@@ -204,7 +217,7 @@ tr:nth-child(even) {
 .navSpacerAtTheTop {
   width: 100%;
   min-height: 10vh;
-  background-color: white;
+  background-color: #fdfdec;
 }
 
 .sideNavSpacer {
@@ -214,13 +227,13 @@ tr:nth-child(even) {
 /* PAGES */
 
 .FooterD {
-  background-color: rgba(255, 255, 255);
+  background-color: #fdfdec;
   display: flex;
   width: 100%;
   justify-content: space-evenly;
   align-items: center;
   padding: 5vh;
-  margin-top: 3vh;
+  padding-top: 8vh;
   border-top-style: dotted;
   border-width: 1px;
 }
@@ -245,7 +258,7 @@ tr:nth-child(even) {
 }
 
 .uvodAktuality {
-  background-color: white;
+  background-color: #fdfdec;
   padding-bottom: 40px;
 }
 
@@ -259,14 +272,15 @@ tr:nth-child(even) {
   grid-template-columns: 1fr 2fr 1fr;
   width: 100%;
   text-align: left;
+  padding-bottom: 4vh;
+  padding-top: 4vh;
 }
 .pozadiPrazdne {
-  background-color: rgba(0, 0, 0, 0.8);
-  margin-top: 3vh;
+  background-color: rgba(0, 0, 0, 0.75);
   padding: 2vh 5vh 2vh 5vh;
   border-radius: 3vh;
   grid-column: 2/3;
-  color: white;
+  color: #fdfdec;
   font-size: 1.3em;
 }
 
@@ -279,6 +293,13 @@ tr:nth-child(even) {
   width: 100%;
   overflow: hidden;
   margin-bottom: 4vh;
+}
+.vitejte {
+  color: rgb(253, 253, 236);
+  text-align: center;
+  font-weight: bold;
+  margin-top: 38vh;
+  font-size: 6vh;
 }
 
 .UvodStredObrazek {
@@ -357,9 +378,6 @@ tr:nth-child(even) {
 .ONasText h1 {
   text-align: center;
 }
-.nasTym {
-  margin-top: 2vh;
-}
 
 .sponzoriCont {
   display: grid;
@@ -375,6 +393,7 @@ tr:nth-child(even) {
   align-items: center;
   padding: 4vh;
 }
+
 .kontaktContM {
   display: none;
 }
@@ -384,9 +403,6 @@ tr:nth-child(even) {
   grid-template-columns: 1fr 2fr 2fr 1fr;
   grid-gap: 8vh;
   text-align: left;
-}
-.kontakt {
-  margin-top: 2vh;
 }
 
 .kontakt h1 {
@@ -414,9 +430,8 @@ tr:nth-child(even) {
 .aktualityContainer {
   display: flex;
   flex-direction: column;
-  margin-top: 2vh;
-  margin-bottom: 5vw;
   align-items: center;
+  background-color: #fdfdec;
 }
 
 .pagination {
@@ -435,12 +450,12 @@ tr:nth-child(even) {
   font-weight: normal;
   border: 1px solid grey;
   background-color: darkslategray;
-  color: white;
+  color: #fdfdec;
 }
 
 .pageLink:hover {
   background-color: grey;
-  color: white;
+  color: #fdfdec;
 }
 
 .pageLinkActive {
@@ -536,20 +551,36 @@ tr:nth-child(even) {
   border-width: 2px;
   text-align: justify;
   padding: 30px;
-  margin: 5%;
+  margin: 5vh;
   overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
 }
 
 .aktualitaNadpis {
   text-transform: uppercase;
   text-align: left;
-  padding: 0px 0px 10px 0px;
+  padding-bottom: 4vh;
+  grid-column: 1/5;
+  grid-row: 1/2;
+}
+.aktualitaImg {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  padding-right: 1vw;
+}
+.aktualitaText {
+  grid-column: 3/5;
+  grid-row: 2/3;
+}
+.aktualitaButton {
+  grid-column: 2/4;
+  grid-row: 3/4;
 }
 
 .aktualita img {
-  width: 50%;
-  float: left;
-  padding: 0.3rem 10px 0px 0px;
+  width: 100%;
 }
 
 .aktualita img:hover {
@@ -557,8 +588,8 @@ tr:nth-child(even) {
 }
 
 .aktualita .button {
-  float: right;
-  margin-top: 10px;
+  width: 100%;
+  margin-top: 3vh;
   font-weight: normal;
 }
 
@@ -568,6 +599,7 @@ tr:nth-child(even) {
 }
 
 .loading {
+  background-color: #fdfdec;
   display: flex;
   height: 50vh;
   justify-content: center;
@@ -712,7 +744,7 @@ tr:nth-child(even) {
     right: -80%;
     height: 90vh;
     top: 10vh;
-    background-color: rgba(252, 252, 252, 0.95);
+    background-color: rgba(253, 253, 236, 0.95);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -735,7 +767,8 @@ tr:nth-child(even) {
   }
   .subNav {
     z-index: 1;
-    background-color: rgb(230, 230, 230);
+
+    background-color: #ebebd9;
   }
   .sideNavActive {
     right: 0%;
@@ -825,7 +858,7 @@ tr:nth-child(even) {
   }
   .FooterM {
     padding-top: 8vw;
-    background-color: rgba(255, 255, 255);
+    background-color: #fdfdec;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -847,8 +880,6 @@ tr:nth-child(even) {
     display: flex;
     flex-direction: column;
     text-align: center;
-  }
-  .kontaktB {
   }
   .mapouter {
     float: none;

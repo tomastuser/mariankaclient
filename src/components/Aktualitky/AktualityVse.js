@@ -36,27 +36,31 @@ const Aktuality = () => {
 
   if (isLoaded) {
     return (
-      <div className='aktualityContainer'>
-        <h1>Aktuality</h1>
-        <br />
-        <div className='aktuality'>
-          {aktualityZde.map((aktualita) => (
-            <AktualitaZastupce key={aktualita.id} aktualita={aktualita} />
-          ))}
+      <div className='mainOstatni'>
+        <div className='aktualityContainer'>
+          <h1>Aktuality</h1>
+          <br />
+          <div className='aktuality'>
+            {aktualityZde.map((aktualita) => (
+              <AktualitaZastupce key={aktualita.id} aktualita={aktualita} />
+            ))}
+          </div>
+          <br />
+          <Pagination
+            postsPerPage={postsPerPage}
+            totalPosts={aktuality.length}
+            paginate={paginate}
+            currentPage={currentPage}
+          />
         </div>
-        <br />
-        <Pagination
-          postsPerPage={postsPerPage}
-          totalPosts={aktuality.length}
-          paginate={paginate}
-          currentPage={currentPage}
-        />
       </div>
     );
   }
   return (
-    <div className='loading'>
-      <h3>NAHRÁVÁM...</h3>
+    <div className='mainOstatni'>
+      <div className='loading'>
+        <h3>NAHRÁVÁM...</h3>
+      </div>
     </div>
   );
 };

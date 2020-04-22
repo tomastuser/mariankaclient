@@ -4,7 +4,9 @@ function UvodStred() {
   return (
     <>
       <div className='UvodStred'>
-        <div className='UvodStredObrazek'>Ahoj</div>
+        <div className='UvodStredObrazek'>
+          <h1 className='vitejte'>Vítejte v Mariánce!</h1>
+        </div>
       </div>
     </>
   );

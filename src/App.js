@@ -37,61 +37,61 @@ const App = () => {
   const navLinks = [
     {
       name: 'O nás',
-      path: '/omariance',
+      path: '/onas',
       subNavLinks: [
         {
           name: 'O Mariánce',
-          path: '/omariance',
+          path: '/onas/omariance',
         },
         {
           name: 'Zázemí',
-          path: '/zazemi',
+          path: '/onas/zazemi',
         },
         {
           name: 'Náš tým',
-          path: '/nastym',
+          path: '/onas/nastym',
         },
         {
           name: 'Program',
-          path: '/program',
+          path: '/onas/program',
         },
         {
           name: 'Projekty',
-          path: '/projekty',
+          path: '/onas/projekty',
         },
         {
           name: 'Podporují nás',
-          path: '/sponzori',
+          path: '/onas/sponzori',
         },
         {
           name: 'Dokumenty',
-          path: '/dokumenty',
+          path: '/onas/dokumenty',
         },
       ],
     },
     {
       name: 'Praktické informace',
-      path: '/zapis',
+      path: '/info',
       subNavLinks: [
         {
           name: 'Zápis',
-          path: '/zapis',
+          path: '/info/zapis',
         },
         {
           name: 'Ceník a stravování',
-          path: '/cenik',
+          path: '/info/cenik',
         },
         {
           name: 'Co s sebou',
-          path: '/cossebou',
+          path: '/info/cossebou',
         },
         {
           name: 'Naše pravidla',
-          path: '/nasepravidla',
+          path: '/info/nasepravidla',
         },
         {
           name: 'Interni sekce',
-          path: '/interni',
+          path: '/info/interni',
         },
       ],
     },
@@ -102,19 +102,19 @@ const App = () => {
     },
     {
       name: 'Aktivity Kavylu',
-      path: '/dalsiaktivity',
+      path: '/kavyl',
       subNavLinks: [
         {
           name: 'Kroužky',
-          path: '/krouzky',
+          path: '/kavyl/krouzky',
         },
         {
           name: 'Tábory',
-          path: '/tabory',
+          path: '/kavyl/tabory',
         },
         {
           name: 'Přednášky',
-          path: '/prednasky',
+          path: '/kavyl/prednasky',
         },
       ],
     },
@@ -134,19 +134,20 @@ const App = () => {
           <Switch>
             <Route path='/' exact component={Uvod} />
             <Route path='/onas' exact component={OMariance} />
-            <Route path='/omariance' exact component={OMariance} />
-            <Route path='/zazemi' exact component={Zazemi} />
-            <Route path='/nastym' exact component={NasTym} />
-            <Route path='/program' exact component={Program} />
-            <Route path='/projekty' exact component={Projekty} />
-            <Route path='/sponzori' exact component={Sponzori} />
-            <Route path='/dokumenty' exact component={Dokumenty} />
+            <Route path='/onas/omariance' exact component={OMariance} />
+            <Route path='/onas/zazemi' exact component={Zazemi} />
+            <Route path='/onas/nastym' exact component={NasTym} />
+            <Route path='/onas/program' exact component={Program} />
+            <Route path='/onas/projekty' exact component={Projekty} />
+            <Route path='/onas/sponzori' exact component={Sponzori} />
+            <Route path='/onas/dokumenty' exact component={Dokumenty} />
 
-            <Route exact path='/zapis' component={Zapis} />
-            <Route exact path='/cenik' component={Cenik} />
-            <Route exact path='/cossebou' component={CoSSebou} />
-            <Route exact path='/nasepravidla' component={NasePravidla} />
-            <Route exact path='/interni' component={Interni} />
+            <Route exact path='/info' component={Zapis} />
+            <Route exact path='/info/zapis' component={Zapis} />
+            <Route exact path='/info/cenik' component={Cenik} />
+            <Route exact path='/info/cossebou' component={CoSSebou} />
+            <Route exact path='/info/nasepravidla' component={NasePravidla} />
+            <Route exact path='/info/interni' component={Interni} />
 
             <Route path='/aktuality' exact component={AktualityVse} />
             <Route exact path='/aktuality/:id' component={Aktualita} />
@@ -156,10 +157,10 @@ const App = () => {
               component={AktualityVse}
             />
 
-            <Route exact path='/dalsiaktivity' component={DalsiAktivity} />
-            <Route exact path='/krouzky' component={Krouzky} />
-            <Route exact path='/tabory' component={Tabory} />
-            <Route exact path='/prednasky' component={Prednasky} />
+            <Route exact path='/kavyl' component={DalsiAktivity} />
+            <Route exact path='/kavyl/krouzky' component={Krouzky} />
+            <Route exact path='/kavyl/tabory' component={Tabory} />
+            <Route exact path='/kavyl/prednasky' component={Prednasky} />
 
             <Route path='/kontakt' exact component={Kontakt} />
 

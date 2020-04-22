@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 function Nav({ navLinks }) {
   const [navOpen, setNavOpen] = useState(false);
@@ -35,13 +35,23 @@ function Nav({ navLinks }) {
         <ul>
           {navLinks.map((link) => (
             <li>
-              <Link to={link.path}>{link.name}</Link>
+              <NavLink
+                activeClassName='navLinkActive'
+                className='navLink'
+                to={link.path}
+              >
+                {link.name}
+              </NavLink>
               <ul className='subNav'>
                 {link.subNavLinks.map((subLink) => (
                   <li>
-                    <Link to={{ pathname: subLink.path, state: subLink.state }}>
+                    <NavLink
+                      className='navLink'
+                      activeClassName='navLinkActive'
+                      to={{ pathname: subLink.path, state: subLink.state }}
+                    >
                       {subLink.name}
-                    </Link>
+                    </NavLink>
                   </li>
                 ))}
               </ul>

@@ -20,27 +20,36 @@ const Aktualita = (props) => {
 
   if (isLoaded) {
     return (
-      <div className='aktualita'>
-        <h2 className='aktualitaNadpis'>{aktualita.Nadpis}</h2>
-        {aktualita.Image === null ? null : (
-          <Link to={`/images/${aktualita.id}`}>
-            <img src={img.url} alt={aktualita.Nadpis} />
-          </Link>
-        )}
-        <div>
-          <div dangerouslySetInnerHTML={{ __html: aktualita.Text }}></div>
-          <br />
-          <br />
-          <div className='button' onClick={props.history.goBack}>
-            Zpět
+      <div className='mainOstatni'>
+        <div className='aktualityContainer'>
+          <div className='aktualita'>
+            <h2 className='aktualitaNadpis'>{aktualita.Nadpis}</h2>
+
+            {aktualita.Image === null ? null : (
+              <Link className='aktualitaImg' to={`/images/${aktualita.id}`}>
+                <img src={img.url} alt={aktualita.Nadpis} />
+              </Link>
+            )}
+            <div
+              className='aktualitaText'
+              dangerouslySetInnerHTML={{ __html: aktualita.Text }}
+            ></div>
+            <div
+              className='aktualitaButton button'
+              onClick={props.history.goBack}
+            >
+              Zpět
+            </div>
           </div>
         </div>
       </div>
     );
   }
   return (
-    <div className='loading'>
-      <h3>NAHRÁVÁM...</h3>
+    <div className='mainOstatni'>
+      <div className='loading'>
+        <h3>NAHRÁVÁM...</h3>
+      </div>
     </div>
   );
 };
