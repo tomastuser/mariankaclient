@@ -3,6 +3,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -226,6 +227,30 @@ tr:nth-child(even) {
 
 /* PAGES */
 
+.Footer2 {
+  background-color: #fdfdec;
+  padding-top: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3vh;
+}
+
+.up {
+  cursor: pointer;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  padding-top: 10px;
+  padding-left: 1px;
+  background-color: #666666;
+  color: white;
+}
+.up:hover {
+  background-color: grey;
+}
+
 .FooterD {
   background-color: #fdfdec;
   display: flex;
@@ -284,6 +309,10 @@ tr:nth-child(even) {
   font-size: 1.3em;
 }
 
+.pozadiPrazdne h1 {
+  margin-bottom: 2vh;
+}
+
 .UvodSliderCont {
   position: relative;
   overflow: hidden;
@@ -297,11 +326,21 @@ tr:nth-child(even) {
   object-fit: cover;
 }
 
-.vitejte {
+.sipka {
+  position: absolute;
   color: rgb(253, 253, 236);
   text-align: center;
-  font-weight: bold;
-  margin-top: 38vh;
+  bottom: 1vh;
+  right: 1vw;
+  font-size: 15vh;
+  cursor: pointer;
+}
+.vitejte {
+  position: absolute;
+  color: rgb(253, 253, 236);
+  text-align: center;
+  top: 45vh;
+  left: 40vw;
   font-size: 6vh;
 }
 
@@ -484,35 +523,46 @@ tr:nth-child(even) {
   width: 100%;
   padding-left: 6vh;
   padding-right: 6vh;
-  grid-gap: 4vh;
+  grid-gap: 0.5vh;
   margin-bottom: 4vh;
 }
 
 .aktualitaZastupce {
   display: flex;
   flex-direction: column;
-  text-align: justify;
+  align-items: flex-start;
+  justify-items: center;
+  text-align: left;
   margin: 10px;
+  border-style: dotted;
+  border-width: 2px;
+  padding: 3.5vh;
 }
 
 .aktualitaZastupceNadpis {
   flex-grow: 1;
+  font-size: 1.2em;
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
   text-align: left;
-  padding: 0px 0px 0.3rem 0px;
+  padding-bottom: 2vh;
   color: #666666;
 }
 
 .aktualitaZastupceText {
   flex-grow: 3;
+  padding-bottom: 1vh;
 }
 
 .aktualitaZastupce img {
-  float: left;
+  padding-left: 1vw;
+  padding-bottom: 1vh;
+  width: 100%;
+}
+.aktualitaZastupceImg {
+  float: right;
   width: 50%;
-  padding: 0.3rem 10px 0px 0px;
 }
 
 .aktualitaZastupce img:hover {
@@ -547,38 +597,30 @@ tr:nth-child(even) {
   width: 50%;
   border-style: dotted;
   border-width: 2px;
-  text-align: justify;
-  padding: 30px;
-  margin: 5vh;
+  text-align: left;
+  padding: 4vh;
   overflow: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .aktualitaNadpis {
   text-transform: uppercase;
   text-align: left;
   padding-bottom: 4vh;
-  grid-column: 1/5;
-  grid-row: 1/2;
 }
 .aktualitaImg {
-  grid-column: 1/3;
-  grid-row: 2/3;
-  padding-right: 1vw;
+  display: flex;
+  justify-content: center;
 }
+
 .aktualitaText {
-  grid-column: 3/5;
-  grid-row: 2/3;
-}
-.aktualitaButton {
-  grid-column: 2/4;
-  grid-row: 3/4;
+  padding-top: 2vh;
 }
 
 .aktualita img {
-  width: 100%;
+  max-height: 50vh;
+  max-width: 100%;
 }
 
 .aktualita img:hover {
@@ -612,6 +654,7 @@ tr:nth-child(even) {
 .fotoContainer {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
+  background-color: #fdfdec;
 }
 
 .foto {
@@ -621,7 +664,7 @@ tr:nth-child(even) {
   margin-top: 5vh;
 }
 .foto img {
-  max-height: 80vh;
+  max-height: 70vh;
   cursor: pointer;
 }
 .foto img:hover {
@@ -694,6 +737,9 @@ tr:nth-child(even) {
     grid-template-columns: auto auto;
     grid-auto-flow: row;
   }
+  .aktualitaZastupce img {
+    padding-left: 1vw;
+  }
 
   .odrazkyUvodContainer {
     grid-template-columns: auto auto;
@@ -730,6 +776,9 @@ tr:nth-child(even) {
   }
   .Footer .fb {
     margin-bottom: 0vh;
+  }
+  .foto img {
+    max-width: 80vw;
   }
 }
 
@@ -812,13 +861,49 @@ tr:nth-child(even) {
   }
   .aktualita {
     width: 90%;
+    display: flex;
+    flex-direction: column;
   }
+  .aktualitaTelo {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .aktualitaText {
+    padding-top: 2vh;
+  }
+
+  .aktualitaImg {
+    max-width: 100%;
+    padding-left: 0px;
+    padding-bottom: 2vh;
+  }
+  .aktualitaNadpis {
+    padding-bottom: 3vh;
+  }
+
   .aktuality {
     grid-template-columns: auto;
     grid-auto-flow: row;
     padding-left: 3vh;
     padding-right: 3vh;
   }
+
+  .aktualitaZastupceText {
+    display: flex;
+    flex-direction: column;
+  }
+  .aktualitaZastupceImg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .aktualitaZastupceImg img {
+    max-height: 50vh;
+    max-width: 100%;
+  }
+
   .odrazkyUvodContainer {
     display: grid;
     grid-template-columns: auto;

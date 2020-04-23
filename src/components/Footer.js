@@ -47,8 +47,8 @@ const Footer = () => {
               343
             </li>
             <li>
-              <FontAwesomeIcon icon={faCopyright} size='1x' fixedWidth /> 2020
-              Lesní mateřská škola Mariánka
+              <FontAwesomeIcon icon={faCopyright} size='1x' fixedWidth /> LMŠ
+              Mariánka 2020
             </li>
           </ul>
         </div>
@@ -89,10 +89,6 @@ const Footer = () => {
             <li>
               <FontAwesomeIcon icon={faPhone} size='1x' fixedWidth /> 777 145
               343
-            </li>
-            <li>
-              <FontAwesomeIcon icon={faCopyright} size='1x' fixedWidth /> 2020
-              Lesní mateřská škola Mariánka
             </li>
           </ul>
         </div>

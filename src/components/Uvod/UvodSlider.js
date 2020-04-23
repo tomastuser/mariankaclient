@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Slider from 'react-slick';
 ///import 'slick-carousel/slick/slick.css';
 ///import 'slick-carousel/slick/slick-theme.css';
@@ -15,7 +16,6 @@ function UvodSlider() {
   const settings = {
     dots: true,
     infinite: true,
-    fade: true,
     speed: 1300,
     autoplay: true,
     slidesToShow: 1,
@@ -32,48 +32,53 @@ function UvodSlider() {
     ),
   };
   return (
-    <>
-      <div className='uvodStredCont'>
-        <Slider {...settings}>
-          <CustomSlide
-            index={1}
-            url={
-              'https://res.cloudinary.com/tomastuser/image/upload/v1587555043/obxzsaaqzz6u9qj3yma5.jpg'
-            }
-          />
-          <CustomSlide
-            index={2}
-            url={
-              'https://res.cloudinary.com/tomastuser/image/upload/v1587555069/pqnkudhjczxcy0mf9fxa.jpg'
-            }
-          />
-          <CustomSlide
-            index={3}
-            url={
-              'https://res.cloudinary.com/tomastuser/image/upload/v1587577195/wfcjam3i8aakkowl51do.jpg'
-            }
-          />
-          <CustomSlide
-            index={4}
-            url={
-              'https://res.cloudinary.com/tomastuser/image/upload/v1587555050/xypg4yxk6drpn00dysd9.jpg'
-            }
-          />
-          <CustomSlide
-            index={5}
-            url={
-              'https://res.cloudinary.com/tomastuser/image/upload/v1587570666/p46ydhhi7tzf1gqgmqae.jpg'
-            }
-          />
-          <CustomSlide
-            index={6}
-            url={
-              'https://res.cloudinary.com/tomastuser/image/upload/v1587555031/lhk1iramcsrxzdl5uf9h.jpg'
-            }
-          />
-        </Slider>
+    <div className='uvodStredCont'>
+      <Slider {...settings}>
+        <CustomSlide
+          index={1}
+          url={
+            'https://res.cloudinary.com/tomastuser/image/upload/v1587555043/obxzsaaqzz6u9qj3yma5.jpg'
+          }
+        />
+        <CustomSlide
+          index={2}
+          url={
+            'https://res.cloudinary.com/tomastuser/image/upload/v1587555069/pqnkudhjczxcy0mf9fxa.jpg'
+          }
+        />
+        <CustomSlide
+          index={3}
+          url={
+            'https://res.cloudinary.com/tomastuser/image/upload/v1587577195/wfcjam3i8aakkowl51do.jpg'
+          }
+        />
+        <CustomSlide
+          index={4}
+          url={
+            'https://res.cloudinary.com/tomastuser/image/upload/v1587555050/xypg4yxk6drpn00dysd9.jpg'
+          }
+        />
+        <CustomSlide
+          index={5}
+          url={
+            'https://res.cloudinary.com/tomastuser/image/upload/v1587570666/p46ydhhi7tzf1gqgmqae.jpg'
+          }
+        />
+        <CustomSlide
+          index={6}
+          url={
+            'https://res.cloudinary.com/tomastuser/image/upload/v1587555031/lhk1iramcsrxzdl5uf9h.jpg'
+          }
+        />
+      </Slider>
+      <div className='vitejte'>Vítejte v Mariánce!</div>
+      <div
+        className='sipka'
+        onClick={() => window.scrollTo(0, window.innerHeight * 0.78)}
+      >
+        ↓
       </div>
-    </>
+    </div>
   );
 }
 

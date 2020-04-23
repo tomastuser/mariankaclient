@@ -11,13 +11,15 @@ const AktualitaZastupce = ({ aktualita }) => {
         <h4>{aktualita.Nadpis}</h4>
       </Link>
       <div className='aktualitaZastupceText'>
-        {aktualita.Image === null ? null : (
-          <Link to={`/aktuality/${aktualita.id}`}>
-            <img src={aktualita.Image.url} alt={aktualita.Nadpis} />
-          </Link>
-        )}
-
+        <div className='aktualitaZastupceImg'>
+          {aktualita.Image === null ? null : (
+            <Link to={`/aktuality/${aktualita.id}`}>
+              <img src={aktualita.Image.url} alt={aktualita.Nadpis} />
+            </Link>
+          )}
+        </div>
         <div
+          className='aktualitaZastupceTeloTextu'
           dangerouslySetInnerHTML={{
             __html:
               aktualita.Text.substr(0, 400) +

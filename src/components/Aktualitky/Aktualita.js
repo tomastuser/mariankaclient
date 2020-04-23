@@ -24,16 +24,17 @@ const Aktualita = (props) => {
         <div className='aktualityContainer'>
           <div className='aktualita'>
             <h2 className='aktualitaNadpis'>{aktualita.Nadpis}</h2>
-
-            {aktualita.Image === null ? null : (
-              <Link className='aktualitaImg' to={`/images/${aktualita.id}`}>
-                <img src={img.url} alt={aktualita.Nadpis} />
-              </Link>
-            )}
-            <div
-              className='aktualitaText'
-              dangerouslySetInnerHTML={{ __html: aktualita.Text }}
-            ></div>
+            <div className='aktualitaTelo'>
+              {aktualita.Image === null ? null : (
+                <Link className='aktualitaImg' to={`/images/${aktualita.id}`}>
+                  <img src={img.url} alt={aktualita.Nadpis} />
+                </Link>
+              )}
+              <div
+                dangerouslySetInnerHTML={{ __html: aktualita.Text }}
+                className='aktualitaText'
+              ></div>
+            </div>
             <div
               className='aktualitaButton button'
               onClick={props.history.goBack}

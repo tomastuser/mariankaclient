@@ -8,6 +8,7 @@ import './slick.css';
 import Uvod from './components/Uvod';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import Footer2 from './components/Footer2';
 
 import OMariance from './components/ONas/OMariance';
 import Zazemi from './components/ONas/Zazemi';
@@ -170,6 +171,7 @@ const App = () => {
             <Route exact path='/images/:id' component={Foto} />
           </Switch>
         </main>
+        <Footer2 />
         <Footer />
       </div>
     </Router>
