@@ -1064,4 +1064,7 @@ tr:nth-child(even) {
   .burger-container {
     width: 25%;
   }
+  .aktualita img {
+    max-height: auto;
+  }
 }
