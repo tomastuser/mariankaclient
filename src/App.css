@@ -662,6 +662,7 @@ tr:nth-child(even) {
 
 .aktualita img {
   max-height: 50vh;
+  max-width: 100%;
 }
 
 .aktualita img:hover {
@@ -1062,5 +1063,9 @@ tr:nth-child(even) {
 
   .burger-container {
     width: 25%;
+  }
+  .aktualita img {
+    max-height: initial;
+    max-width: 100%;
   }
 }
