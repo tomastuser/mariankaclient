@@ -9,7 +9,7 @@
 body {
   font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
-  list-style-position: inside;
+  list-style-position: outside;
   color: #666666;
 }
 
@@ -348,6 +348,7 @@ tr:nth-child(even) {
 
 .vitejteCont {
   position: absolute;
+  pointer-events: none;
   width: 100vw;
   height: 90vh;
   top: 10vh;
@@ -743,6 +744,12 @@ tr:nth-child(even) {
   line-height: 300%;
   margin-bottom: 2vh;
   margin-top: 4vh;
+}
+
+.odrazkyUvodContainer h1 {
+  text-transform: uppercase;
+  grid-column: 1/3;
+  text-align: center;
 }
 .odrazkySloupecA {
   text-align: left;

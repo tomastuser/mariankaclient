@@ -13,7 +13,7 @@ import { faSeedling } from '@fortawesome/free-solid-svg-icons';
 function OdrazkyUvod() {
   return (
     <div className='odrazkyUvodContainer'>
-      <h1>V Mariánce</h1>
+      <h1>Lesní školka Mariánka</h1>
       <ul className='odrazkySloupecA'>
         <li>
           <FontAwesomeIcon icon={faBug} size='1x' fixedWidth /> {'  '}dětství v

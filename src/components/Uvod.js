@@ -32,7 +32,6 @@ function Uvod() {
 
         <h1>Nejnovější aktuality</h1>
         <AktualityPrehled />
-        <br />
         <Link className='button' to='/aktuality'>
           Všechny příspěvky
         </Link>

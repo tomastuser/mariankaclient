@@ -130,11 +130,11 @@ const App = () => {
   ];
   return (
     <Router>
+      <ScrollToTop />
       <div className='App'>
         <Nav navLinks={navLinks} />
         <div className='navSpacerAtTheTop'></div>
         <main>
-          <ScrollToTop />
           <Switch>
             <Route path='/' exact component={Uvod} />
             <Route path='/onas' exact component={OMariance} />
