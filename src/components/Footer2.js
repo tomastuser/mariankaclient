@@ -7,7 +7,6 @@ const Footer2 = () => {
     <div className='Footer2'>
       <div
         style={{
-          width: '10%',
           display: 'flex',
           justifyContent: 'center',
         }}

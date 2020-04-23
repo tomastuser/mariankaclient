@@ -171,8 +171,9 @@ const App = () => {
             <Route exact path='/images/:id' component={Foto} />
           </Switch>
         </main>
-        <Footer2 />
+
         <Footer />
+        <Footer2 />
       </div>
     </Router>
   );

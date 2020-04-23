@@ -22,8 +22,8 @@ const AktualitaZastupce = ({ aktualita }) => {
           className='aktualitaZastupceTeloTextu'
           dangerouslySetInnerHTML={{
             __html:
-              aktualita.Text.substr(0, 400) +
-              (aktualita.Text.length > 400 ? ' ...' : ''),
+              aktualita.Text.substr(0, 500) +
+              (aktualita.Text.length > 500 ? ' ...' : ''),
           }}
         ></div>
       </div>

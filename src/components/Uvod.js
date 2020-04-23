@@ -1,41 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import AktualityPrehled from './Aktualitky/AktualityPrehled';
 import OdrazkyUvod from './Uvod/OdrazkyUvod';
 import UvodSlider from './Uvod/UvodSlider';
+import Andel from './Uvod/Andel';
 
 function Uvod() {
-  const [kridlaAct, setKridla] = useState(true);
   return (
     <div className='Uvod'>
       <div className='pozadiFixed'>
-        <img src='https://res.cloudinary.com/tomastuser/image/upload/v1586968070/IMG_6591_k3vx8h.jpg'></img>
+        <img src='https://res.cloudinary.com/tomastuser/image/upload/v1587637533/aezswjs5y9sb8bds5hyhHD_do5byd.jpg'></img>
       </div>
       <div className='uvodAktuality'>
         <UvodSlider />
-        <OdrazkyUvod />
-        <div className='andelCont'>
-          <div className='andel'>
-            <div
-              onClick={() => setKridla((kridlaAct) => !kridlaAct)}
-              className='andelObrazek'
-            >
-              <img
-                className='hlava'
-                src='https://res.cloudinary.com/tomastuser/image/upload/v1587161196/ANDEL_hlava_tu8aho.png'
-              ></img>
-              <div className='dotkni'>klikni!</div>
-              <img
-                className={kridlaAct ? 'kridlaActive kridla' : 'kridla'}
-                src='https://res.cloudinary.com/tomastuser/image/upload/v1587158349/ANDEL_kridla1_d8nlm6.png'
-              ></img>
-              <img
-                className='trup'
-                src='https://res.cloudinary.com/tomastuser/image/upload/v1587155615/ANDEL_kridla1_j05xh3.png'
-              ></img>
-            </div>
+        <div className='UvodTextCont'>
+          <div className='UvodTextLogo'>
+            <img src='https://res.cloudinary.com/tomastuser/image/upload/v1587164936/marianka-logo_jo1a9u.png'></img>
+          </div>
+          <div className='UvodText'>
+            <h1>Lesní mateřská škola Mariánka</h1>
+            <h3>
+              Patříme k nejdéle fungujícím lesním školkám v České republice.
+              Naše školka je zapsaná v rejstříku škol a školských zařízení při
+              MŠMT, své děti proto nemusíte přehlašovat na poslední rok jinam.
+              Splňujeme Standardy kvality pro lesní školky a jsme součástí
+              Asociace lesních mateřských škol.
+            </h3>
           </div>
         </div>
+        <Andel />
+
         <h1>Nejnovější aktuality</h1>
         <AktualityPrehled />
         <br />
@@ -45,23 +39,7 @@ function Uvod() {
       </div>
       <div className='pozadiPrazdneContainer'>
         <div className='pozadiPrazdne'>
-          <h1>Víte, že...</h1>
-          <ul>
-            <li>
-              patříme k nejdéle fungujícím lesním školkám v České republice?
-            </li>
-            <li>
-              je školka zapsaná v rejstříku škol a školských zařízení při MŠMT?
-            </li>
-            <li>
-              své děti proto nemusíte přehlašovat na poslední rok jinam a
-              školkovné si můžete odečíst z daní
-            </li>
-            <li>
-              splňujeme Standardy kvality pro lesní školky a jsme součástí
-              Asociace lesních mateřských škol?
-            </li>
-          </ul>
+          <OdrazkyUvod />
         </div>
       </div>
     </div>

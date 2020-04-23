@@ -40,7 +40,7 @@ function Nav({ navLinks }) {
                 className='navLink'
                 to={link.path}
               >
-                {link.name}
+                <p>{link.name}</p>
               </NavLink>
               <ul className='subNav'>
                 {link.subNavLinks.map((subLink) => (
@@ -50,7 +50,7 @@ function Nav({ navLinks }) {
                       activeClassName='navLinkActive'
                       to={{ pathname: subLink.path, state: subLink.state }}
                     >
-                      {subLink.name}
+                      <p>{subLink.name}</p>
                     </NavLink>
                   </li>
                 ))}

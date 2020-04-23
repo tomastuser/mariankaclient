@@ -71,10 +71,12 @@ function UvodSlider() {
           }
         />
       </Slider>
-      <div className='vitejte'>Vítejte v Mariánce!</div>
+      <div className='vitejteCont'>
+        <div className='vitejte'>Vítejte v Mariánce!</div>
+      </div>
       <div
         className='sipka'
-        onClick={() => window.scrollTo(0, window.innerHeight * 0.78)}
+        onClick={() => window.scrollTo(0, window.innerHeight * 0.9)}
       >
         ↓
       </div>
