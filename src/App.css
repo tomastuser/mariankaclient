@@ -298,7 +298,6 @@ tr:nth-child(even) {
   left: 50%;
   margin-bottom: -50vh;
   margin-left: -50vw;
-
   z-index: -1;
 }
 
@@ -349,7 +348,7 @@ tr:nth-child(even) {
 .vitejteCont {
   position: absolute;
   pointer-events: none;
-  width: 100vw;
+  width: 100%;
   height: 90vh;
   top: 10vh;
   left: 0;
@@ -1065,7 +1064,7 @@ tr:nth-child(even) {
     width: 25%;
   }
   .aktualita img {
-    max-height: initial;
+    max-height: none;
     max-width: 100%;
   }
 }
