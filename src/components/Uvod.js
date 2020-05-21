@@ -13,21 +13,6 @@ function Uvod() {
       </div>
       <div className='uvodAktuality'>
         <UvodSlider />
-        <div className='UvodTextCont'>
-          <div className='UvodTextLogo'>
-            <img src='https://res.cloudinary.com/tomastuser/image/upload/v1587164936/marianka-logo_jo1a9u.png'></img>
-          </div>
-          <div className='UvodText'>
-            <h1>Lesní mateřská škola Mariánka</h1>
-            <h3>
-              Patříme k nejdéle fungujícím lesním školkám v České republice.
-              Naše školka je zapsaná v rejstříku škol a školských zařízení při
-              MŠMT, své děti proto nemusíte přehlašovat na poslední rok jinam.
-              Splňujeme Standardy kvality pro lesní školky a jsme součástí
-              Asociace lesních mateřských škol.
-            </h3>
-          </div>
-        </div>
         <Andel />
 
         <h1>Nejnovější aktuality</h1>

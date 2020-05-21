@@ -191,6 +191,11 @@ tr:nth-child(even) {
   height: 0%;
   position: relative;
 }
+
+.show {
+  display: block;
+}
+
 .subNav {
   position: absolute;
   display: flex;
@@ -312,7 +317,7 @@ tr:nth-child(even) {
 .pozadiPrazdne {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 2vh 5vh 2vh 5vh;
-  border-radius: 3vh;
+  border-radius: 1vh;
   grid-column: 2/3;
   color: #fdfdec;
   font-size: 1.3em;
@@ -448,6 +453,25 @@ tr:nth-child(even) {
 
 .ONasText h1 {
   text-align: center;
+}
+
+.loginCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 50px;
+  height: 100%;
+  text-align: center;
+}
+
+.loginCont input {
+  border: none;
+  border-radius: 0.3rem;
+  background-color: lightgrey;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
 }
 
 .sponzoriCont {
@@ -746,7 +770,6 @@ tr:nth-child(even) {
 }
 
 .odrazkyUvodContainer h1 {
-  text-transform: uppercase;
   grid-column: 1/3;
   text-align: center;
 }
