@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import Slider from 'react-slick';
 ///import 'slick-carousel/slick/slick.css';
 ///import 'slick-carousel/slick/slick-theme.css';
@@ -7,7 +6,7 @@ import Slider from 'react-slick';
 const CustomSlide = ({ index, url, ...props }) => {
   return (
     <div className='UvodSlider' {...props}>
-      <img src={url}></img>
+      <img src={url} alt=''></img>
     </div>
   );
 };

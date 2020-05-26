@@ -16,29 +16,30 @@ import {
 function OdrazkyUvod() {
   return (
     <div className='odrazkyUvodContainer'>
-      <h1>Lesní školka Mariánka - to je:</h1>
+      <h1>Lesní školka Mariánka</h1>
       <ul className='odrazkySloupecA'>
         <li>
-          <FontAwesomeIcon icon={faBug} size='1x' fixedWidth /> {'  '}dětství v
-          přírodě
+          {'  '}dětství v přírodě{' '}
+          <FontAwesomeIcon icon={faBug} size='1x' fixedWidth />
         </li>
         <li>
+          {'  '} učení prožitkem{' '}
           <FontAwesomeIcon icon={faSeedling} size='1x' fixedWidth />
-          {'  '} učení prožitkem
         </li>
         <li>
+          {'  '} bez zdí a plotů{' '}
           <FontAwesomeIcon icon={faFrog} size='1x' fixedWidth />
-          {'  '} bez zdí a plotů
         </li>
         <li>
+          {'  '} kapacita 15 dětí{' '}
           <FontAwesomeIcon icon={faCampground} size='1x' fixedWidth />
-          {'  '} kapacita 15 dětí
         </li>
         <li>
+          {'  '} otevřeno 7:30 až 16:00{' '}
           <FontAwesomeIcon icon={faCloudSun} size='1x' fixedWidth />
-          {'  '} otevřeno 7:30 až 16:00
         </li>
       </ul>
+      <div className='cara'></div>
       <ul className='odrazkySloupecB'>
         <li>
           <FontAwesomeIcon icon={faTree} size='1x' fixedWidth />

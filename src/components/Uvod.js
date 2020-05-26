@@ -9,7 +9,10 @@ function Uvod() {
   return (
     <div className='Uvod'>
       <div className='pozadiFixed'>
-        <img src='https://res.cloudinary.com/tomastuser/image/upload/v1587637533/aezswjs5y9sb8bds5hyhHD_do5byd.jpg'></img>
+        <img
+          src='https://res.cloudinary.com/tomastuser/image/upload/v1587637533/aezswjs5y9sb8bds5hyhHD_do5byd.jpg'
+          alt=''
+        ></img>
       </div>
       <div className='uvodAktuality'>
         <UvodSlider />

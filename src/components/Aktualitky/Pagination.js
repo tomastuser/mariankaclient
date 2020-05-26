@@ -12,7 +12,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
     <nav>
       <ul className='pagination'>
         <li className='pageItem'>
-          {currentPage == 1 ? (
+          {currentPage === 1 ? (
             <span className='pageLink pageLinkDisabled'>&laquo;</span>
           ) : (
             <Link
@@ -30,7 +30,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
               onClick={() => paginate(number)}
               to={`/aktuality/strana/${number}`}
               className={
-                number == currentPage ? 'pageLink pageLinkActive' : 'pageLink'
+                number === currentPage ? 'pageLink pageLinkActive' : 'pageLink'
               }
             >
               {number}
@@ -38,7 +38,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate, currentPage }) => {
           </li>
         ))}
         <li class='pageItem'>
-          {currentPage == pageNumbers.length ? (
+          {currentPage === pageNumbers.length ? (
             <span class='pageLink pageLinkDisabled'>&raquo;</span>
           ) : (
             <Link

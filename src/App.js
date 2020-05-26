@@ -22,6 +22,7 @@ import Zapis from './components/Info/Zapis';
 import Cenik from './components/Info/Cenik';
 import CoSSebou from './components/Info/CoSSebou';
 import NasePravidla from './components/Info/NasePravidla';
+import InterniLogin from './components/Info/InterniLogin';
 import Interni from './components/Info/Interni';
 
 import Aktualita from './components/Aktualitky/Aktualita';
@@ -36,12 +37,16 @@ import Kontakt from './components/Kontakt';
 
 import Foto from './components/Aktualitky/Foto';
 import ScrollToTop from './components/otherComponents/ScrollToTop';
+import PageNotFound from './components/otherComponents/PageNotFound';
+import ProtectedRoute from './components/otherComponents/ProtectedRoute';
 
 const App = () => {
   const navLinks = [
     {
       name: 'O nás',
       path: '/onas',
+      id: '1',
+      open: false,
       subNavLinks: [
         {
           name: 'O Mariánce',
@@ -76,6 +81,8 @@ const App = () => {
     {
       name: 'Praktické informace',
       path: '/info',
+      id: '2',
+      open: false,
       subNavLinks: [
         {
           name: 'Zápis',
@@ -102,11 +109,15 @@ const App = () => {
     {
       name: 'Aktuality',
       path: '/aktuality',
+      id: '3',
+      open: false,
       subNavLinks: [],
     },
     {
       name: 'Aktivity Kavylu',
       path: '/kavyl',
+      id: '4',
+      open: false,
       subNavLinks: [
         {
           name: 'Kroužky',
@@ -125,6 +136,8 @@ const App = () => {
     {
       name: 'Kontakt',
       path: '/kontakt',
+      id: '5',
+      open: false,
       subNavLinks: [],
     },
   ];
@@ -151,7 +164,8 @@ const App = () => {
             <Route exact path='/info/cenik' component={Cenik} />
             <Route exact path='/info/cossebou' component={CoSSebou} />
             <Route exact path='/info/nasepravidla' component={NasePravidla} />
-            <Route exact path='/info/interni' component={Interni} />
+            <Route exact path='/info/internilogin' component={InterniLogin} />
+            <ProtectedRoute exact path='/info/interni' component={Interni} />
 
             <Route path='/aktuality' exact component={AktualityVse} />
             <Route exact path='/aktuality/:id' component={Aktualita} />
@@ -169,6 +183,7 @@ const App = () => {
             <Route path='/kontakt' exact component={Kontakt} />
 
             <Route exact path='/images/:id' component={Foto} />
+            <Route path='*' exact component={PageNotFound} />
           </Switch>
         </main>
 

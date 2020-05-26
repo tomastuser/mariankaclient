@@ -69,6 +69,14 @@ main ul {
   margin-bottom: 2vh;
 }
 
+button {
+  border-style: none;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1em;
+  line-height: 1.5;
+  color: #fdfdec;
+}
+
 .button {
   text-decoration: none;
   text-align: center;
@@ -181,14 +189,23 @@ tr:nth-child(even) {
   width: 100%;
   text-align: center;
 }
-.navLinks li:hover .subNav li {
-  top: 0;
-  display: block;
+
+@media screen and (min-width: 1025px) {
+  .navLinks li:hover .subNav li {
+    top: 0;
+    display: block;
+  }
 }
 
-.subNav li {
+.subNavLi {
   display: none;
   height: 0%;
+  position: relative;
+}
+
+.subNavActive {
+  top: 0;
+  display: block;
   position: relative;
 }
 
@@ -274,7 +291,7 @@ tr:nth-child(even) {
 
 .Footer ul {
   list-style: none;
-  line-height: 2;
+  line-height: 2.5;
   text-align: left;
   margin-top: 2vh;
 }
@@ -308,7 +325,7 @@ tr:nth-child(even) {
 
 .pozadiPrazdneContainer {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 3fr 1fr;
   width: 100%;
   text-align: left;
   padding-bottom: 4vh;
@@ -390,7 +407,7 @@ tr:nth-child(even) {
 .andelCont {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  margin-top: 4vh;
+  margin-top: 8vh;
 }
 .andel {
   grid-column: 2/3;
@@ -762,7 +779,8 @@ tr:nth-child(even) {
 
 .odrazkyUvodContainer {
   display: grid;
-  grid-template-columns: 1.5fr 1.5fr;
+  grid-template-columns: 200fr 1fr 200fr;
+  grid-column-gap: 2vw;
   font-size: 19px;
   line-height: 300%;
   margin-bottom: 2vh;
@@ -770,17 +788,24 @@ tr:nth-child(even) {
 }
 
 .odrazkyUvodContainer h1 {
-  grid-column: 1/3;
+  grid-column: 1/4;
+
   text-align: center;
 }
 .odrazkySloupecA {
-  text-align: left;
+  text-align: right;
   grid-column: 1/2;
   list-style: none;
 }
+
+.cara {
+  border-left: 2px solid white;
+  grid-column: 2/3;
+  height: 100%;
+}
 .odrazkySloupecB {
   text-align: left;
-  grid-column: 2/3;
+  grid-column: 3/4;
   list-style: none;
 }
 
@@ -840,6 +865,7 @@ tr:nth-child(even) {
     text-align: center;
     margin-bottom: 5vh;
   }
+
   .Footer img {
     width: 20vw;
     margin-bottom: 5vh;
@@ -889,6 +915,7 @@ tr:nth-child(even) {
 
     background-color: #ebebd9;
   }
+
   .sideNavActive {
     right: 0%;
   }

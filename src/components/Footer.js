@@ -12,12 +12,18 @@ const Footer = () => {
       <div className='FooterD'>
         <div>
           <a href='https://www.lesnims.cz/lesni-ms/standardy-kvality.html'>
-            <img src='https://res.cloudinary.com/tomastuser/image/upload/v1585867492/qdc5glp7boyre6m2sd6p.png'></img>
+            <img
+              src='https://res.cloudinary.com/tomastuser/image/upload/v1585867492/qdc5glp7boyre6m2sd6p.png'
+              alt=''
+            ></img>
           </a>
         </div>
         <div>
           <a href='http://www.lesnims.cz/'>
-            <img src='http://www.lesnimarianka.cz/Data/Sites/1/media/alms_logo_transparentni.gif'></img>
+            <img
+              src='http://www.lesnimarianka.cz/Data/Sites/1/media/alms_logo_transparentni.gif'
+              alt=''
+            ></img>
           </a>
         </div>
         <div>
@@ -25,6 +31,7 @@ const Footer = () => {
             <img
               className='fb'
               style={{ width: '90px' }}
+              alt=''
               src='https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg'
             ></img>
           </a>
@@ -54,12 +61,18 @@ const Footer = () => {
         </div>
         <div>
           <a href='https://www.darujme.cz/projekt/1200844'>
-            <img src='http://www.lesnimarianka.cz/Data/Sites/1/media/darujme_logo.png'></img>
+            <img
+              src='http://www.lesnimarianka.cz/Data/Sites/1/media/darujme_logo.png'
+              alt=''
+            ></img>
           </a>
         </div>
         <div>
           <a href='http://bit.ly/Podporuji-Kavyl'>
-            <img src='http://lesnikvitek.cz/Data/Sites/1/media/uvodni/2017/givt_box_211_211.jpg'></img>
+            <img
+              src='http://lesnikvitek.cz/Data/Sites/1/media/uvodni/2017/givt_box_211_211.jpg'
+              alt=''
+            ></img>
           </a>
         </div>
       </div>
@@ -69,6 +82,7 @@ const Footer = () => {
             <img
               className='fb'
               style={{ width: '90px' }}
+              alt=''
               src='https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg'
             ></img>
           </a>
@@ -94,22 +108,34 @@ const Footer = () => {
         </div>
         <div>
           <a href='https://www.lesnims.cz/lesni-ms/standardy-kvality.html'>
-            <img src='https://res.cloudinary.com/tomastuser/image/upload/v1585867492/qdc5glp7boyre6m2sd6p.png'></img>
+            <img
+              src='https://res.cloudinary.com/tomastuser/image/upload/v1585867492/qdc5glp7boyre6m2sd6p.png'
+              alt=''
+            ></img>
           </a>
         </div>
         <div>
           <a href='http://www.lesnims.cz/'>
-            <img src='http://www.lesnimarianka.cz/Data/Sites/1/media/alms_logo_transparentni.gif'></img>
+            <img
+              src='http://www.lesnimarianka.cz/Data/Sites/1/media/alms_logo_transparentni.gif'
+              alt=''
+            ></img>
           </a>
         </div>
         <div>
           <a href='https://www.darujme.cz/projekt/1200844'>
-            <img src='http://www.lesnimarianka.cz/Data/Sites/1/media/darujme_logo.png'></img>
+            <img
+              src='http://www.lesnimarianka.cz/Data/Sites/1/media/darujme_logo.png'
+              alt=''
+            ></img>
           </a>
         </div>
         <div>
           <a href='http://bit.ly/Podporuji-Kavyl'>
-            <img src='http://lesnikvitek.cz/Data/Sites/1/media/uvodni/2017/givt_box_211_211.jpg'></img>
+            <img
+              src='http://lesnikvitek.cz/Data/Sites/1/media/uvodni/2017/givt_box_211_211.jpg'
+              alt=''
+            ></img>
           </a>
         </div>
       </div>

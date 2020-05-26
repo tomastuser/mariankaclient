@@ -16,7 +16,7 @@ const Aktualita = (props) => {
         setIsLoaded(true);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [props.match.params.id]);
 
   if (isLoaded) {
     return (
