@@ -144,8 +144,8 @@ const App = () => {
       <ScrollToTop />
       <AuthProvider
         navigate={props.history.push}
-        auth0_domain='useauth.auth0.com'
-        auth0_client_id='GjWNFNOHq1ino7lQNJBwEywa1aYtbIzh'
+        auth0_domain='dev-ygeujhi0.us.auth0.com'
+        auth0_client_id='x3qt8REWr7UFOz7tFq0mEP83tT0Xxff8'
       >
         <div className='App'>
           <Nav navLinks={navLinks} />
