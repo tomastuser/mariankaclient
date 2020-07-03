@@ -167,7 +167,6 @@ const App = () => {
               <Route exact path='/info/cenik' component={Cenik} />
               <Route exact path='/info/cossebou' component={CoSSebou} />
               <Route exact path='/info/nasepravidla' component={NasePravidla} />
-              <Route exact path='/info/internilogin' component={InterniLogin} />
               <ProtectedRoute exact path='/info/interni' component={Interni} />
 
               <Route path='/aktuality' exact component={AktualityVse} />
