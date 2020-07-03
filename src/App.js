@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { AuthProvider } from 'react-use-auth';
 
 import './App.css';
 import './slick-theme.css';
@@ -25,8 +26,8 @@ import NasePravidla from './components/Info/NasePravidla';
 import InterniLogin from './components/Info/InterniLogin';
 import Interni from './components/Info/Interni';
 
-import Aktualita from './components/Aktualitky/Aktualita';
-import AktualityVse from './components/Aktualitky/AktualityVse';
+import Aktualita from './components/Aktuality/Aktualita';
+import AktualityVse from './components/Aktuality/AktualityVse';
 
 import DalsiAktivity from './components/DalsiAktivity/DalsiAktivity';
 import Krouzky from './components/DalsiAktivity/Krouzky';
@@ -35,10 +36,11 @@ import Prednasky from './components/DalsiAktivity/Prednasky';
 
 import Kontakt from './components/Kontakt';
 
-import Foto from './components/Aktualitky/Foto';
+import Foto from './components/Aktuality/Foto';
 import ScrollToTop from './components/otherComponents/ScrollToTop';
 import PageNotFound from './components/otherComponents/PageNotFound';
 import ProtectedRoute from './components/otherComponents/ProtectedRoute';
+import AuthCallback from './components/otherComponents/AuthCallback';
 
 const App = () => {
   const navLinks = [
@@ -46,7 +48,6 @@ const App = () => {
       name: 'O nás',
       path: '/onas',
       id: '1',
-      open: false,
       subNavLinks: [
         {
           name: 'O Mariánce',
@@ -82,7 +83,6 @@ const App = () => {
       name: 'Praktické informace',
       path: '/info',
       id: '2',
-      open: false,
       subNavLinks: [
         {
           name: 'Zápis',
@@ -110,7 +110,6 @@ const App = () => {
       name: 'Aktuality',
       path: '/aktuality',
       id: '3',
-      open: false,
       subNavLinks: [],
     },
     {
@@ -137,59 +136,65 @@ const App = () => {
       name: 'Kontakt',
       path: '/kontakt',
       id: '5',
-      open: false,
       subNavLinks: [],
     },
   ];
   return (
     <Router>
       <ScrollToTop />
-      <div className='App'>
-        <Nav navLinks={navLinks} />
-        <div className='navSpacerAtTheTop'></div>
-        <main>
-          <Switch>
-            <Route path='/' exact component={Uvod} />
-            <Route path='/onas' exact component={OMariance} />
-            <Route path='/onas/omariance' exact component={OMariance} />
-            <Route path='/onas/zazemi' exact component={Zazemi} />
-            <Route path='/onas/nastym' exact component={NasTym} />
-            <Route path='/onas/program' exact component={Program} />
-            <Route path='/onas/projekty' exact component={Projekty} />
-            <Route path='/onas/sponzori' exact component={Sponzori} />
-            <Route path='/onas/dokumenty' exact component={Dokumenty} />
+      <AuthProvider
+        navigate={props.history.push}
+        auth0_domain='useauth.auth0.com'
+        auth0_client_id='GjWNFNOHq1ino7lQNJBwEywa1aYtbIzh'
+      >
+        <div className='App'>
+          <Nav navLinks={navLinks} />
+          <div className='navSpacerAtTheTop'></div>
+          <main>
+            <Switch>
+              <Route path='/' exact component={Uvod} />
+              <Route path='/onas' exact component={OMariance} />
+              <Route path='/onas/omariance' exact component={OMariance} />
+              <Route path='/onas/zazemi' exact component={Zazemi} />
+              <Route path='/onas/nastym' exact component={NasTym} />
+              <Route path='/onas/program' exact component={Program} />
+              <Route path='/onas/projekty' exact component={Projekty} />
+              <Route path='/onas/sponzori' exact component={Sponzori} />
+              <Route path='/onas/dokumenty' exact component={Dokumenty} />
 
-            <Route exact path='/info' component={Zapis} />
-            <Route exact path='/info/zapis' component={Zapis} />
-            <Route exact path='/info/cenik' component={Cenik} />
-            <Route exact path='/info/cossebou' component={CoSSebou} />
-            <Route exact path='/info/nasepravidla' component={NasePravidla} />
-            <Route exact path='/info/internilogin' component={InterniLogin} />
-            <ProtectedRoute exact path='/info/interni' component={Interni} />
+              <Route exact path='/info' component={Zapis} />
+              <Route exact path='/info/zapis' component={Zapis} />
+              <Route exact path='/info/cenik' component={Cenik} />
+              <Route exact path='/info/cossebou' component={CoSSebou} />
+              <Route exact path='/info/nasepravidla' component={NasePravidla} />
+              <Route exact path='/info/internilogin' component={InterniLogin} />
+              <ProtectedRoute exact path='/info/interni' component={Interni} />
 
-            <Route path='/aktuality' exact component={AktualityVse} />
-            <Route exact path='/aktuality/:id' component={Aktualita} />
-            <Route
-              exact
-              path='/aktuality/strana/:id'
-              component={AktualityVse}
-            />
+              <Route path='/aktuality' exact component={AktualityVse} />
+              <Route exact path='/aktuality/:id' component={Aktualita} />
+              <Route
+                exact
+                path='/aktuality/strana/:id'
+                component={AktualityVse}
+              />
 
-            <Route exact path='/kavyl' component={DalsiAktivity} />
-            <Route exact path='/kavyl/krouzky' component={Krouzky} />
-            <Route exact path='/kavyl/tabory' component={Tabory} />
-            <Route exact path='/kavyl/prednasky' component={Prednasky} />
+              <Route exact path='/kavyl' component={DalsiAktivity} />
+              <Route exact path='/kavyl/krouzky' component={Krouzky} />
+              <Route exact path='/kavyl/tabory' component={Tabory} />
+              <Route exact path='/kavyl/prednasky' component={Prednasky} />
 
-            <Route path='/kontakt' exact component={Kontakt} />
+              <Route path='/kontakt' exact component={Kontakt} />
 
-            <Route exact path='/images/:id' component={Foto} />
-            <Route path='*' exact component={PageNotFound} />
-          </Switch>
-        </main>
+              <Route exact path='/images/:id' component={Foto} />
+              <Route path='*' exact component={PageNotFound} />
+              <Route path='/auth0_callback' component={AuthCallback} />
+            </Switch>
+          </main>
 
-        <Footer />
-        <Footer2 />
-      </div>
+          <Footer />
+          <Footer2 />
+        </div>
+      </AuthProvider>
     </Router>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import AktualityPrehled from './Aktualitky/AktualityPrehled';
+import AktualityPrehled from './Aktuality/AktualityPrehled';
 import OdrazkyUvod from './Uvod/OdrazkyUvod';
 import UvodSlider from './Uvod/UvodSlider';
 import Andel from './Uvod/Andel';
