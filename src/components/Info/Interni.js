@@ -21,9 +21,14 @@ const Interni = (props) => {
     );
   } else {
     return (
-      <button className='button' onClick={login}>
-        Přilášení
-      </button>
+      <div className='mainTextCont'>
+        <div className='mainText'>
+          <h1>Interní sekce - přihlášení</h1>
+          <button className='button' onClick={login}>
+            Přihlášení
+          </button>
+        </div>
+      </div>
     );
   }
 };

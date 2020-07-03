@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route, withRouter } from 'react-router-dom';
 import { AuthProvider } from 'react-use-auth';
 
 import './App.css';
@@ -38,10 +38,9 @@ import Kontakt from './components/Kontakt';
 import Foto from './components/Aktuality/Foto';
 import ScrollToTop from './components/otherComponents/ScrollToTop';
 import PageNotFound from './components/otherComponents/PageNotFound';
-import ProtectedRoute from './components/otherComponents/ProtectedRoute';
 import AuthCallback from './components/otherComponents/AuthCallback';
 
-const App = () => {
+const App = (props) => {
   const navLinks = [
     {
       name: 'O nás',
@@ -139,7 +138,7 @@ const App = () => {
     },
   ];
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <AuthProvider
         navigate={props.history.push}
@@ -166,7 +165,7 @@ const App = () => {
               <Route exact path='/info/cenik' component={Cenik} />
               <Route exact path='/info/cossebou' component={CoSSebou} />
               <Route exact path='/info/nasepravidla' component={NasePravidla} />
-              <ProtectedRoute exact path='/info/interni' component={Interni} />
+              <Route exact path='/info/interni' component={Interni} />
 
               <Route path='/aktuality' exact component={AktualityVse} />
               <Route exact path='/aktuality/:id' component={Aktualita} />
@@ -193,8 +192,8 @@ const App = () => {
           <Footer2 />
         </div>
       </AuthProvider>
-    </Router>
+    </>
   );
 };
 
-export default App;
+export default withRouter(App);

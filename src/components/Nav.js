@@ -61,7 +61,7 @@ function Nav({ navLinks }) {
                 activeClassName='navLinkActive'
                 className='navLink'
                 to={link.path}
-                onClick={(console.log(subNavLinksOpen), subNavOpeningHandler)}
+                onClick={subNavOpeningHandler}
                 id={link.id}
               >
                 <p>{link.name}</p>
