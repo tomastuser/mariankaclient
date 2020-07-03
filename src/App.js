@@ -23,7 +23,6 @@ import Zapis from './components/Info/Zapis';
 import Cenik from './components/Info/Cenik';
 import CoSSebou from './components/Info/CoSSebou';
 import NasePravidla from './components/Info/NasePravidla';
-import InterniLogin from './components/Info/InterniLogin';
 import Interni from './components/Info/Interni';
 
 import Aktualita from './components/Aktuality/Aktualita';
