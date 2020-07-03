@@ -183,8 +183,8 @@ const App = (props) => {
               <Route path='/kontakt' exact component={Kontakt} />
 
               <Route exact path='/images/:id' component={Foto} />
-              <Route path='*' exact component={PageNotFound} />
               <Route path='/auth0_callback' component={AuthCallback} />
+              <Route path='*' exact component={PageNotFound} />
             </Switch>
           </main>
 
