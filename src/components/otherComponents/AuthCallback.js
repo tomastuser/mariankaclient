@@ -4,7 +4,9 @@ import { useAuth } from 'react-use-auth';
 const AuthCallback = () => {
   const { handleAuthentication } = useAuth();
   useEffect(() => {
-    handleAuthentication();
+    handleAuthentication({
+      postLoginRoute: '/info/interni',
+    });
   }, [handleAuthentication]);
   return <h1>OVĚŘOVÁNÍ...</h1>;
 };
